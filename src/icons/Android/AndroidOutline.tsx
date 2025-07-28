@@ -7,7 +7,7 @@ interface AndroidOutlineProps {
 
 function AndroidOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: AndroidOutlineProps) {
   return (
     <svg 

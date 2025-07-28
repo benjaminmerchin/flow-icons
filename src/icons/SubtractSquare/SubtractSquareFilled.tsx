@@ -7,7 +7,7 @@ interface SubtractSquareFilledProps {
 
 function SubtractSquareFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SubtractSquareFilledProps) {
   return (
     <svg 

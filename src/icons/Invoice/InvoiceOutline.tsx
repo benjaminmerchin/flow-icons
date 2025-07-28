@@ -7,7 +7,7 @@ interface InvoiceOutlineProps {
 
 function InvoiceOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: InvoiceOutlineProps) {
   return (
     <svg 

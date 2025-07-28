@@ -7,7 +7,7 @@ interface SquaresOutlineProps {
 
 function SquaresOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SquaresOutlineProps) {
   return (
     <svg 

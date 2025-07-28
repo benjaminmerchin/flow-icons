@@ -7,7 +7,7 @@ interface ArrowDownRightFilledProps {
 
 function ArrowDownRightFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowDownRightFilledProps) {
   return (
     <svg 

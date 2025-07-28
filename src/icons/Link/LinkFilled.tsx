@@ -7,7 +7,7 @@ interface LinkFilledProps {
 
 function LinkFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: LinkFilledProps) {
   return (
     <svg 

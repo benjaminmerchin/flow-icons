@@ -7,7 +7,7 @@ interface BellSlashFilledProps {
 
 function BellSlashFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BellSlashFilledProps) {
   return (
     <svg 

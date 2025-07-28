@@ -7,7 +7,7 @@ interface SubtractCircleOutlineProps {
 
 function SubtractCircleOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SubtractCircleOutlineProps) {
   return (
     <svg 

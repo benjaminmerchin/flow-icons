@@ -7,7 +7,7 @@ interface SpeakerOffOutlineProps {
 
 function SpeakerOffOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SpeakerOffOutlineProps) {
   return (
     <svg 

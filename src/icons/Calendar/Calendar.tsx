@@ -10,7 +10,7 @@ interface CalendarProps {
 
 function Calendar({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: CalendarProps) {
   return filled ? (

@@ -7,7 +7,7 @@ interface ArrowRightOutlineProps {
 
 function ArrowRightOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowRightOutlineProps) {
   return (
     <svg 

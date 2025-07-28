@@ -7,7 +7,7 @@ interface BellSlashOutlineProps {
 
 function BellSlashOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BellSlashOutlineProps) {
   return (
     <svg 

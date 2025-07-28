@@ -7,7 +7,7 @@ interface ArrowUpLeftOutlineProps {
 
 function ArrowUpLeftOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowUpLeftOutlineProps) {
   return (
     <svg 

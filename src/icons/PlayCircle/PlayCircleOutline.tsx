@@ -7,7 +7,7 @@ interface PlayCircleOutlineProps {
 
 function PlayCircleOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PlayCircleOutlineProps) {
   return (
     <svg 

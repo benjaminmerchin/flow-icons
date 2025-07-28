@@ -7,7 +7,7 @@ interface CircleArrowUpRightFilledProps {
 
 function CircleArrowUpRightFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: CircleArrowUpRightFilledProps) {
   return (
     <svg 

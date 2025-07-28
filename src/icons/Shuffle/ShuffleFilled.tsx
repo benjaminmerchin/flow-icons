@@ -7,7 +7,7 @@ interface ShuffleFilledProps {
 
 function ShuffleFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ShuffleFilledProps) {
   return (
     <svg 

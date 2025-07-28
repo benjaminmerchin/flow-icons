@@ -7,7 +7,7 @@ interface EarOffOutlineProps {
 
 function EarOffOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: EarOffOutlineProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface PopperOutlineProps {
 
 function PopperOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PopperOutlineProps) {
   return (
     <svg 

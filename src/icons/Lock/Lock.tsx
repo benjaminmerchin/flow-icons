@@ -10,7 +10,7 @@ interface LockProps {
 
 function Lock({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: LockProps) {
   return filled ? (

@@ -7,7 +7,7 @@ interface IphoneFilledProps {
 
 function IphoneFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: IphoneFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface ChevronRightFilledProps {
 
 function ChevronRightFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ChevronRightFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface PencilOutlineProps {
 
 function PencilOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PencilOutlineProps) {
   return (
     <svg 

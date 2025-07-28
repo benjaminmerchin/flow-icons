@@ -10,7 +10,7 @@ interface ArrowRightProps {
 
 function ArrowRight({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: ArrowRightProps) {
   return filled ? (

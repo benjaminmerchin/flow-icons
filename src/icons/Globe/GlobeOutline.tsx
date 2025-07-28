@@ -7,7 +7,7 @@ interface GlobeOutlineProps {
 
 function GlobeOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: GlobeOutlineProps) {
   return (
     <svg 

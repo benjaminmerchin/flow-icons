@@ -7,7 +7,7 @@ interface GameControllerOutlineProps {
 
 function GameControllerOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: GameControllerOutlineProps) {
   return (
     <svg 

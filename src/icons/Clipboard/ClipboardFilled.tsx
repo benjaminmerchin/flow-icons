@@ -7,7 +7,7 @@ interface ClipboardFilledProps {
 
 function ClipboardFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ClipboardFilledProps) {
   return (
     <svg 

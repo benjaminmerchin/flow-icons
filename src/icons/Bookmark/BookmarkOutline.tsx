@@ -7,7 +7,7 @@ interface BookmarkOutlineProps {
 
 function BookmarkOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BookmarkOutlineProps) {
   return (
     <svg 

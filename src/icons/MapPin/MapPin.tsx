@@ -10,7 +10,7 @@ interface MapPinProps {
 
 function MapPin({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: MapPinProps) {
   return filled ? (

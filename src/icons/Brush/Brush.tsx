@@ -10,7 +10,7 @@ interface BrushProps {
 
 function Brush({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: BrushProps) {
   return filled ? (

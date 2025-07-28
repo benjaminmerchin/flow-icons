@@ -7,7 +7,7 @@ interface EuroOutlineProps {
 
 function EuroOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: EuroOutlineProps) {
   return (
     <svg 

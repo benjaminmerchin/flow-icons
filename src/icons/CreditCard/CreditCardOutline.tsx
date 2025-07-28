@@ -7,7 +7,7 @@ interface CreditCardOutlineProps {
 
 function CreditCardOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: CreditCardOutlineProps) {
   return (
     <svg 

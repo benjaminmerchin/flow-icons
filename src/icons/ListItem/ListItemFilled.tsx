@@ -7,7 +7,7 @@ interface ListItemFilledProps {
 
 function ListItemFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ListItemFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface MicrophoneOutlineProps {
 
 function MicrophoneOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: MicrophoneOutlineProps) {
   return (
     <svg 

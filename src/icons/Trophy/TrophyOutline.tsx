@@ -7,7 +7,7 @@ interface TrophyOutlineProps {
 
 function TrophyOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: TrophyOutlineProps) {
   return (
     <svg 

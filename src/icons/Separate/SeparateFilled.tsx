@@ -7,7 +7,7 @@ interface SeparateFilledProps {
 
 function SeparateFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SeparateFilledProps) {
   return (
     <svg 

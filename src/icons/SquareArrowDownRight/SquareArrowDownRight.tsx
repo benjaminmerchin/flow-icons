@@ -10,7 +10,7 @@ interface SquareArrowDownRightProps {
 
 function SquareArrowDownRight({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: SquareArrowDownRightProps) {
   return filled ? (

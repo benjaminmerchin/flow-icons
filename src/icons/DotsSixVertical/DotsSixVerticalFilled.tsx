@@ -7,7 +7,7 @@ interface DotsSixVerticalFilledProps {
 
 function DotsSixVerticalFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: DotsSixVerticalFilledProps) {
   return (
     <svg 

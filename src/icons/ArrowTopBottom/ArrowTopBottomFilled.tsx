@@ -7,7 +7,7 @@ interface ArrowTopBottomFilledProps {
 
 function ArrowTopBottomFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowTopBottomFilledProps) {
   return (
     <svg 

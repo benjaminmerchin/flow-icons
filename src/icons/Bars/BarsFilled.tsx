@@ -7,7 +7,7 @@ interface BarsFilledProps {
 
 function BarsFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BarsFilledProps) {
   return (
     <svg 

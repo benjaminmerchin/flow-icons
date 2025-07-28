@@ -10,7 +10,7 @@ interface PinProps {
 
 function Pin({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: PinProps) {
   return filled ? (

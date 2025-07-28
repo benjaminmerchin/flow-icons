@@ -7,7 +7,7 @@ interface SeparateOutlineProps {
 
 function SeparateOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SeparateOutlineProps) {
   return (
     <svg 

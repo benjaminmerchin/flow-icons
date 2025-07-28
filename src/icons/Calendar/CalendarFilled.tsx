@@ -7,7 +7,7 @@ interface CalendarFilledProps {
 
 function CalendarFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: CalendarFilledProps) {
   return (
     <svg 

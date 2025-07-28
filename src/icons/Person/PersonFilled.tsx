@@ -7,7 +7,7 @@ interface PersonFilledProps {
 
 function PersonFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PersonFilledProps) {
   return (
     <svg 

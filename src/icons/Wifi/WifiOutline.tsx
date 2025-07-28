@@ -7,7 +7,7 @@ interface WifiOutlineProps {
 
 function WifiOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: WifiOutlineProps) {
   return (
     <svg 

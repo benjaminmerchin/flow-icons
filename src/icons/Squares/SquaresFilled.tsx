@@ -7,7 +7,7 @@ interface SquaresFilledProps {
 
 function SquaresFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SquaresFilledProps) {
   return (
     <svg 

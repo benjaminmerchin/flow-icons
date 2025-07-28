@@ -7,7 +7,7 @@ interface TrophyFilledProps {
 
 function TrophyFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: TrophyFilledProps) {
   return (
     <svg 

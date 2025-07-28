@@ -10,7 +10,7 @@ interface AlertTriangleProps {
 
 function AlertTriangle({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: AlertTriangleProps) {
   return filled ? (

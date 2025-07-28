@@ -7,7 +7,7 @@ interface PinFilledProps {
 
 function PinFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PinFilledProps) {
   return (
     <svg 

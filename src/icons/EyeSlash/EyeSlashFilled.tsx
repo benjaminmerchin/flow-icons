@@ -7,7 +7,7 @@ interface EyeSlashFilledProps {
 
 function EyeSlashFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: EyeSlashFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface SquareArrowDownOutlineProps {
 
 function SquareArrowDownOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SquareArrowDownOutlineProps) {
   return (
     <svg 

@@ -10,7 +10,7 @@ interface StarProps {
 
 function Star({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: StarProps) {
   return filled ? (

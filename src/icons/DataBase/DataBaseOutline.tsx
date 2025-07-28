@@ -7,7 +7,7 @@ interface DataBaseOutlineProps {
 
 function DataBaseOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: DataBaseOutlineProps) {
   return (
     <svg 

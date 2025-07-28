@@ -7,7 +7,7 @@ interface EarFilledProps {
 
 function EarFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: EarFilledProps) {
   return (
     <svg 

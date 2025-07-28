@@ -7,7 +7,7 @@ interface ArrowLeftFilledProps {
 
 function ArrowLeftFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowLeftFilledProps) {
   return (
     <svg 

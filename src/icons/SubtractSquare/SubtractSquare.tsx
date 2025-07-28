@@ -10,7 +10,7 @@ interface SubtractSquareProps {
 
 function SubtractSquare({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: SubtractSquareProps) {
   return filled ? (

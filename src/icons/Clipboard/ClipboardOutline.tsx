@@ -7,7 +7,7 @@ interface ClipboardOutlineProps {
 
 function ClipboardOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ClipboardOutlineProps) {
   return (
     <svg 

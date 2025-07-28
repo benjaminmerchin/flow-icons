@@ -7,7 +7,7 @@ interface BarsOutlineProps {
 
 function BarsOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BarsOutlineProps) {
   return (
     <svg 

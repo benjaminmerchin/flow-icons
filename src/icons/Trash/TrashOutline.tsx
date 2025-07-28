@@ -7,7 +7,7 @@ interface TrashOutlineProps {
 
 function TrashOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: TrashOutlineProps) {
   return (
     <svg 

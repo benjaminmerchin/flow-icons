@@ -7,7 +7,7 @@ interface SpeakerOffFilledProps {
 
 function SpeakerOffFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SpeakerOffFilledProps) {
   return (
     <svg 

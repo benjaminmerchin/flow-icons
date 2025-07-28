@@ -7,7 +7,7 @@ interface FolderOutlineProps {
 
 function FolderOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: FolderOutlineProps) {
   return (
     <svg 

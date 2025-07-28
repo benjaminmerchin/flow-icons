@@ -52,7 +52,7 @@ interface ${componentName}Props {
 
 function ${componentName}({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ${componentName}Props) {
   return (
     <svg 
@@ -105,7 +105,7 @@ interface ${PascalName}Props {
 
 function ${PascalName}({ 
   size = 24, 
-  color = "#1A1A1A"${hasOutline && hasFilled ? ',\n  filled = false' : ''} 
+  color = "currentColor"${hasOutline && hasFilled ? ',\n  filled = false' : ''} 
 }: ${PascalName}Props) {
 ${renderLogic}
 }

@@ -7,7 +7,7 @@ interface XFilledProps {
 
 function XFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: XFilledProps) {
   return (
     <svg 

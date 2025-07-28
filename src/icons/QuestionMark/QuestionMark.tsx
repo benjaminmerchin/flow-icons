@@ -10,7 +10,7 @@ interface QuestionMarkProps {
 
 function QuestionMark({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: QuestionMarkProps) {
   return filled ? (

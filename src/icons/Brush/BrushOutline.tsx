@@ -7,7 +7,7 @@ interface BrushOutlineProps {
 
 function BrushOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: BrushOutlineProps) {
   return (
     <svg 

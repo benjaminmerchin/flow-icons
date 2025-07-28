@@ -7,7 +7,7 @@ interface MagicWandFilledProps {
 
 function MagicWandFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: MagicWandFilledProps) {
   return (
     <svg 

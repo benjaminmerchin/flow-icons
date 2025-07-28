@@ -7,7 +7,7 @@ interface PlayOutlineProps {
 
 function PlayOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PlayOutlineProps) {
   return (
     <svg 

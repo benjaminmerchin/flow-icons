@@ -7,7 +7,7 @@ interface PuzzlePieceFilledProps {
 
 function PuzzlePieceFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PuzzlePieceFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface SettingsFilledProps {
 
 function SettingsFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SettingsFilledProps) {
   return (
     <svg 

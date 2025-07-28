@@ -7,7 +7,7 @@ interface QuestionMarkOutlineProps {
 
 function QuestionMarkOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: QuestionMarkOutlineProps) {
   return (
     <svg 

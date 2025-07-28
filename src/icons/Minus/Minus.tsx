@@ -10,7 +10,7 @@ interface MinusProps {
 
 function Minus({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: MinusProps) {
   return filled ? (

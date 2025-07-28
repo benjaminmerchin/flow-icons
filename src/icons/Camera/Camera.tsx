@@ -10,7 +10,7 @@ interface CameraProps {
 
 function Camera({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: CameraProps) {
   return filled ? (

@@ -7,7 +7,7 @@ interface LineArrowRightFilledProps {
 
 function LineArrowRightFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: LineArrowRightFilledProps) {
   return (
     <svg 

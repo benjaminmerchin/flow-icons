@@ -7,7 +7,7 @@ interface ChartOutlineProps {
 
 function ChartOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ChartOutlineProps) {
   return (
     <svg 

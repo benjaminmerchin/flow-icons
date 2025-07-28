@@ -7,7 +7,7 @@ interface HandOutlineProps {
 
 function HandOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: HandOutlineProps) {
   return (
     <svg 

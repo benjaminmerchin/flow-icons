@@ -7,7 +7,7 @@ interface AndroidFilledProps {
 
 function AndroidFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: AndroidFilledProps) {
   return (
     <svg 

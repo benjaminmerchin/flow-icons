@@ -7,7 +7,7 @@ interface ArrowSplitHorizontalFilledProps {
 
 function ArrowSplitHorizontalFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowSplitHorizontalFilledProps) {
   return (
     <svg 

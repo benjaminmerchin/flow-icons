@@ -10,7 +10,7 @@ interface BoltSlashProps {
 
 function BoltSlash({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: BoltSlashProps) {
   return filled ? (

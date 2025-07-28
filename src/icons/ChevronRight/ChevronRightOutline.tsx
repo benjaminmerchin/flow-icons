@@ -7,7 +7,7 @@ interface ChevronRightOutlineProps {
 
 function ChevronRightOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ChevronRightOutlineProps) {
   return (
     <svg 

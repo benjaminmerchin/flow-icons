@@ -7,7 +7,7 @@ interface MinusFilledProps {
 
 function MinusFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: MinusFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface MagnifyingGlassOutlineProps {
 
 function MagnifyingGlassOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: MagnifyingGlassOutlineProps) {
   return (
     <svg 

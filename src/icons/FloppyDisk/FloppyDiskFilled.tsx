@@ -7,7 +7,7 @@ interface FloppyDiskFilledProps {
 
 function FloppyDiskFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: FloppyDiskFilledProps) {
   return (
     <svg 

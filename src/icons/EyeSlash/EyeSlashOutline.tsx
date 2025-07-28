@@ -7,7 +7,7 @@ interface EyeSlashOutlineProps {
 
 function EyeSlashOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: EyeSlashOutlineProps) {
   return (
     <svg 

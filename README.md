@@ -73,7 +73,7 @@ All icon components accept the following props:
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `size` | `number \| string` | `24` | Icon size (px or any CSS unit) |
-| `color` | `string` | `"#1A1A1A"` | Icon color (hex, rgb, css variable, etc.) |
+| `color` | `string` | `"currentColor"` | Icon color (inherits from parent, or any CSS color) |
 | `filled` | `boolean` | `false` | Show filled variant (main components only) |
 
 ## 📚 Available Icons

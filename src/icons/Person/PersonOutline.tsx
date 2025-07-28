@@ -7,7 +7,7 @@ interface PersonOutlineProps {
 
 function PersonOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: PersonOutlineProps) {
   return (
     <svg 

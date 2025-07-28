@@ -7,7 +7,7 @@ interface SquareArrowUpRightFilledProps {
 
 function SquareArrowUpRightFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SquareArrowUpRightFilledProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface AlertTriangleOutlineProps {
 
 function AlertTriangleOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: AlertTriangleOutlineProps) {
   return (
     <svg 

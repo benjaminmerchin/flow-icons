@@ -7,7 +7,7 @@ interface QuoteFilledProps {
 
 function QuoteFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: QuoteFilledProps) {
   return (
     <svg 

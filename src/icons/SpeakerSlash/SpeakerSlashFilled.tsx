@@ -7,7 +7,7 @@ interface SpeakerSlashFilledProps {
 
 function SpeakerSlashFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: SpeakerSlashFilledProps) {
   return (
     <svg 

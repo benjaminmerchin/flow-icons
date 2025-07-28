@@ -10,7 +10,7 @@ interface DataBaseProps {
 
 function DataBase({ 
   size = 24, 
-  color = "#1A1A1A",
+  color = "currentColor",
   filled = false 
 }: DataBaseProps) {
   return filled ? (

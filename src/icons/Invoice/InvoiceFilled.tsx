@@ -7,7 +7,7 @@ interface InvoiceFilledProps {
 
 function InvoiceFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: InvoiceFilledProps) {
   return (
     <svg 

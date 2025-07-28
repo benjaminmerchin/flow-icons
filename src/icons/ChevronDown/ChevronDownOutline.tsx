@@ -7,7 +7,7 @@ interface ChevronDownOutlineProps {
 
 function ChevronDownOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ChevronDownOutlineProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface GaugeOutlineProps {
 
 function GaugeOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: GaugeOutlineProps) {
   return (
     <svg 

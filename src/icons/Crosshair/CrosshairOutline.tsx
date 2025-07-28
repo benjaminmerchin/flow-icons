@@ -7,7 +7,7 @@ interface CrosshairOutlineProps {
 
 function CrosshairOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: CrosshairOutlineProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface ListItemOutlineProps {
 
 function ListItemOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ListItemOutlineProps) {
   return (
     <svg 

@@ -7,7 +7,7 @@ interface HeartFilledProps {
 
 function HeartFilled({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: HeartFilledProps) {
   return (
     <svg 

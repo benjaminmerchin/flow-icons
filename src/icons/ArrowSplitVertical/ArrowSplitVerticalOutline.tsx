@@ -7,7 +7,7 @@ interface ArrowSplitVerticalOutlineProps {
 
 function ArrowSplitVerticalOutline({ 
   size = 24, 
-  color = "#1A1A1A" 
+  color = "currentColor" 
 }: ArrowSplitVerticalOutlineProps) {
   return (
     <svg 
