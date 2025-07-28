@@ -8,16 +8,16 @@ interface InformationProps {
   filled?: boolean;
 }
 
-const Information: React.FC<InformationProps> = ({ 
+function Information({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: InformationProps) {
   return filled ? (
     <InformationFilled size={size} color={color} />
   ) : (
     <InformationOutline size={size} color={color} />
   );
-};
+}
 
 export default Information;

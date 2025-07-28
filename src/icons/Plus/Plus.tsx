@@ -8,16 +8,16 @@ interface PlusProps {
   filled?: boolean;
 }
 
-const Plus: React.FC<PlusProps> = ({ 
+function Plus({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PlusProps) {
   return filled ? (
     <PlusFilled size={size} color={color} />
   ) : (
     <PlusOutline size={size} color={color} />
   );
-};
+}
 
 export default Plus;

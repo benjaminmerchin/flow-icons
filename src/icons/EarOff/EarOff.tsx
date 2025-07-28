@@ -8,16 +8,16 @@ interface EarOffProps {
   filled?: boolean;
 }
 
-const EarOff: React.FC<EarOffProps> = ({ 
+function EarOff({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EarOffProps) {
   return filled ? (
     <EarOffFilled size={size} color={color} />
   ) : (
     <EarOffOutline size={size} color={color} />
   );
-};
+}
 
 export default EarOff;

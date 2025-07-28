@@ -8,16 +8,16 @@ interface InvoiceProps {
   filled?: boolean;
 }
 
-const Invoice: React.FC<InvoiceProps> = ({ 
+function Invoice({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: InvoiceProps) {
   return filled ? (
     <InvoiceFilled size={size} color={color} />
   ) : (
     <InvoiceOutline size={size} color={color} />
   );
-};
+}
 
 export default Invoice;

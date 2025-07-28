@@ -8,16 +8,16 @@ interface ArrowBottomTopProps {
   filled?: boolean;
 }
 
-const ArrowBottomTop: React.FC<ArrowBottomTopProps> = ({ 
+function ArrowBottomTop({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ArrowBottomTopProps) {
   return filled ? (
     <ArrowBottomTopFilled size={size} color={color} />
   ) : (
     <ArrowBottomTopOutline size={size} color={color} />
   );
-};
+}
 
 export default ArrowBottomTop;

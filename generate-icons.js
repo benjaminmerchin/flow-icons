@@ -38,7 +38,10 @@ function svgToReactComponent(svgContent, componentName, props = {}) {
   const innerSvg = svgMatch[1];
   
   // Remplacer les attributs fill="#1A1A1A" par {color}
-  const processedSvg = innerSvg.replace(/fill="#1A1A1A"/g, 'fill={color}');
+  // Traiter aussi les attributs avec des tirets
+  let processedSvg = innerSvg.replace(/fill="#1A1A1A"/g, 'fill={color}');
+  processedSvg = processedSvg.replace(/fill-rule=/g, 'fillRule=');
+  processedSvg = processedSvg.replace(/clip-rule=/g, 'clipRule=');
   
   return `import React from 'react';
 
@@ -47,10 +50,10 @@ interface ${componentName}Props {
   color?: string;
 }
 
-const ${componentName}: React.FC<${componentName}Props> = ({ 
+function ${componentName}({ 
   size = 24, 
   color = "#1A1A1A" 
-}) => {
+}: ${componentName}Props) {
   return (
     <svg 
       width={size} 
@@ -59,10 +62,10 @@ const ${componentName}: React.FC<${componentName}Props> = ({
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      ${processedSvg}
+      ${processedSvg.trim()}
     </svg>
   );
-};
+}
 
 export default ${componentName};
 `;
@@ -100,12 +103,12 @@ interface ${PascalName}Props {
   color?: string;${hasOutline && hasFilled ? '\n  filled?: boolean;' : ''}
 }
 
-const ${PascalName}: React.FC<${PascalName}Props> = ({ 
+function ${PascalName}({ 
   size = 24, 
   color = "#1A1A1A"${hasOutline && hasFilled ? ',\n  filled = false' : ''} 
-}) => {
+}: ${PascalName}Props) {
 ${renderLogic}
-};
+}
 
 export default ${PascalName};
 `;

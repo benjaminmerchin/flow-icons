@@ -8,16 +8,16 @@ interface CircleArrowUpRightProps {
   filled?: boolean;
 }
 
-const CircleArrowUpRight: React.FC<CircleArrowUpRightProps> = ({ 
+function CircleArrowUpRight({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: CircleArrowUpRightProps) {
   return filled ? (
     <CircleArrowUpRightFilled size={size} color={color} />
   ) : (
     <CircleArrowUpRightOutline size={size} color={color} />
   );
-};
+}
 
 export default CircleArrowUpRight;

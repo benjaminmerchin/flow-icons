@@ -8,16 +8,16 @@ interface CreditCardProps {
   filled?: boolean;
 }
 
-const CreditCard: React.FC<CreditCardProps> = ({ 
+function CreditCard({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: CreditCardProps) {
   return filled ? (
     <CreditCardFilled size={size} color={color} />
   ) : (
     <CreditCardOutline size={size} color={color} />
   );
-};
+}
 
 export default CreditCard;

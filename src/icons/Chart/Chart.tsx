@@ -8,16 +8,16 @@ interface ChartProps {
   filled?: boolean;
 }
 
-const Chart: React.FC<ChartProps> = ({ 
+function Chart({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ChartProps) {
   return filled ? (
     <ChartFilled size={size} color={color} />
   ) : (
     <ChartOutline size={size} color={color} />
   );
-};
+}
 
 export default Chart;

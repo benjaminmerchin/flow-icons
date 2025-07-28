@@ -8,16 +8,16 @@ interface CameraProps {
   filled?: boolean;
 }
 
-const Camera: React.FC<CameraProps> = ({ 
+function Camera({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: CameraProps) {
   return filled ? (
     <CameraFilled size={size} color={color} />
   ) : (
     <CameraOutline size={size} color={color} />
   );
-};
+}
 
 export default Camera;

@@ -8,16 +8,16 @@ interface PlayProps {
   filled?: boolean;
 }
 
-const Play: React.FC<PlayProps> = ({ 
+function Play({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PlayProps) {
   return filled ? (
     <PlayFilled size={size} color={color} />
   ) : (
     <PlayOutline size={size} color={color} />
   );
-};
+}
 
 export default Play;

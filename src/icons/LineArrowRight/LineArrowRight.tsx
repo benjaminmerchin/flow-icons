@@ -8,16 +8,16 @@ interface LineArrowRightProps {
   filled?: boolean;
 }
 
-const LineArrowRight: React.FC<LineArrowRightProps> = ({ 
+function LineArrowRight({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: LineArrowRightProps) {
   return filled ? (
     <LineArrowRightFilled size={size} color={color} />
   ) : (
     <LineArrowRightOutline size={size} color={color} />
   );
-};
+}
 
 export default LineArrowRight;

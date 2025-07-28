@@ -8,16 +8,16 @@ interface PlayCircleProps {
   filled?: boolean;
 }
 
-const PlayCircle: React.FC<PlayCircleProps> = ({ 
+function PlayCircle({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PlayCircleProps) {
   return filled ? (
     <PlayCircleFilled size={size} color={color} />
   ) : (
     <PlayCircleOutline size={size} color={color} />
   );
-};
+}
 
 export default PlayCircle;

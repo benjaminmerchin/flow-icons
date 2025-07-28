@@ -8,16 +8,16 @@ interface MapPinProps {
   filled?: boolean;
 }
 
-const MapPin: React.FC<MapPinProps> = ({ 
+function MapPin({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: MapPinProps) {
   return filled ? (
     <MapPinFilled size={size} color={color} />
   ) : (
     <MapPinOutline size={size} color={color} />
   );
-};
+}
 
 export default MapPin;

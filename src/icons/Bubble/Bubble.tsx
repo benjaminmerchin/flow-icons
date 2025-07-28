@@ -8,16 +8,16 @@ interface BubbleProps {
   filled?: boolean;
 }
 
-const Bubble: React.FC<BubbleProps> = ({ 
+function Bubble({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BubbleProps) {
   return filled ? (
     <BubbleFilled size={size} color={color} />
   ) : (
     <BubbleOutline size={size} color={color} />
   );
-};
+}
 
 export default Bubble;

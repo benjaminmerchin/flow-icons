@@ -8,16 +8,16 @@ interface EyeSlashProps {
   filled?: boolean;
 }
 
-const EyeSlash: React.FC<EyeSlashProps> = ({ 
+function EyeSlash({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EyeSlashProps) {
   return filled ? (
     <EyeSlashFilled size={size} color={color} />
   ) : (
     <EyeSlashOutline size={size} color={color} />
   );
-};
+}
 
 export default EyeSlash;

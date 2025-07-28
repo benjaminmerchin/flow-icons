@@ -8,16 +8,16 @@ interface ArrowUpRightProps {
   filled?: boolean;
 }
 
-const ArrowUpRight: React.FC<ArrowUpRightProps> = ({ 
+function ArrowUpRight({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ArrowUpRightProps) {
   return filled ? (
     <ArrowUpRightFilled size={size} color={color} />
   ) : (
     <ArrowUpRightOutline size={size} color={color} />
   );
-};
+}
 
 export default ArrowUpRight;

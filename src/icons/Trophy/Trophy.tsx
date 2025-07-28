@@ -8,16 +8,16 @@ interface TrophyProps {
   filled?: boolean;
 }
 
-const Trophy: React.FC<TrophyProps> = ({ 
+function Trophy({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: TrophyProps) {
   return filled ? (
     <TrophyFilled size={size} color={color} />
   ) : (
     <TrophyOutline size={size} color={color} />
   );
-};
+}
 
 export default Trophy;

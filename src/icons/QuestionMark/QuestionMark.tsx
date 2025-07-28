@@ -8,16 +8,16 @@ interface QuestionMarkProps {
   filled?: boolean;
 }
 
-const QuestionMark: React.FC<QuestionMarkProps> = ({ 
+function QuestionMark({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: QuestionMarkProps) {
   return filled ? (
     <QuestionMarkFilled size={size} color={color} />
   ) : (
     <QuestionMarkOutline size={size} color={color} />
   );
-};
+}
 
 export default QuestionMark;

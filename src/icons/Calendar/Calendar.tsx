@@ -8,16 +8,16 @@ interface CalendarProps {
   filled?: boolean;
 }
 
-const Calendar: React.FC<CalendarProps> = ({ 
+function Calendar({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: CalendarProps) {
   return filled ? (
     <CalendarFilled size={size} color={color} />
   ) : (
     <CalendarOutline size={size} color={color} />
   );
-};
+}
 
 export default Calendar;

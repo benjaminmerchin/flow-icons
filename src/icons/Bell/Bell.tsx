@@ -8,16 +8,16 @@ interface BellProps {
   filled?: boolean;
 }
 
-const Bell: React.FC<BellProps> = ({ 
+function Bell({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BellProps) {
   return filled ? (
     <BellFilled size={size} color={color} />
   ) : (
     <BellOutline size={size} color={color} />
   );
-};
+}
 
 export default Bell;

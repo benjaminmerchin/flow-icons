@@ -8,16 +8,16 @@ interface PinProps {
   filled?: boolean;
 }
 
-const Pin: React.FC<PinProps> = ({ 
+function Pin({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PinProps) {
   return filled ? (
     <PinFilled size={size} color={color} />
   ) : (
     <PinOutline size={size} color={color} />
   );
-};
+}
 
 export default Pin;

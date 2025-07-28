@@ -8,16 +8,16 @@ interface SubtractCircleProps {
   filled?: boolean;
 }
 
-const SubtractCircle: React.FC<SubtractCircleProps> = ({ 
+function SubtractCircle({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SubtractCircleProps) {
   return filled ? (
     <SubtractCircleFilled size={size} color={color} />
   ) : (
     <SubtractCircleOutline size={size} color={color} />
   );
-};
+}
 
 export default SubtractCircle;

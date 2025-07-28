@@ -8,16 +8,16 @@ interface CakeProps {
   filled?: boolean;
 }
 
-const Cake: React.FC<CakeProps> = ({ 
+function Cake({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: CakeProps) {
   return filled ? (
     <CakeFilled size={size} color={color} />
   ) : (
     <CakeOutline size={size} color={color} />
   );
-};
+}
 
 export default Cake;

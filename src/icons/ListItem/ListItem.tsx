@@ -8,16 +8,16 @@ interface ListItemProps {
   filled?: boolean;
 }
 
-const ListItem: React.FC<ListItemProps> = ({ 
+function ListItem({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ListItemProps) {
   return filled ? (
     <ListItemFilled size={size} color={color} />
   ) : (
     <ListItemOutline size={size} color={color} />
   );
-};
+}
 
 export default ListItem;

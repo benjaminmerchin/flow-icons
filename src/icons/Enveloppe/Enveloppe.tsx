@@ -8,16 +8,16 @@ interface EnveloppeProps {
   filled?: boolean;
 }
 
-const Enveloppe: React.FC<EnveloppeProps> = ({ 
+function Enveloppe({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EnveloppeProps) {
   return filled ? (
     <EnveloppeFilled size={size} color={color} />
   ) : (
     <EnveloppeOutline size={size} color={color} />
   );
-};
+}
 
 export default Enveloppe;

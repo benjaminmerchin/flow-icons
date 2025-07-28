@@ -8,16 +8,16 @@ interface BellSlashProps {
   filled?: boolean;
 }
 
-const BellSlash: React.FC<BellSlashProps> = ({ 
+function BellSlash({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BellSlashProps) {
   return filled ? (
     <BellSlashFilled size={size} color={color} />
   ) : (
     <BellSlashOutline size={size} color={color} />
   );
-};
+}
 
 export default BellSlash;

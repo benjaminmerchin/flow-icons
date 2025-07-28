@@ -8,16 +8,16 @@ interface AlertCircleProps {
   filled?: boolean;
 }
 
-const AlertCircle: React.FC<AlertCircleProps> = ({ 
+function AlertCircle({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: AlertCircleProps) {
   return filled ? (
     <AlertCircleFilled size={size} color={color} />
   ) : (
     <AlertCircleOutline size={size} color={color} />
   );
-};
+}
 
 export default AlertCircle;

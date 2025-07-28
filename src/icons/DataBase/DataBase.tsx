@@ -8,16 +8,16 @@ interface DataBaseProps {
   filled?: boolean;
 }
 
-const DataBase: React.FC<DataBaseProps> = ({ 
+function DataBase({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: DataBaseProps) {
   return filled ? (
     <DataBaseFilled size={size} color={color} />
   ) : (
     <DataBaseOutline size={size} color={color} />
   );
-};
+}
 
 export default DataBase;

@@ -8,16 +8,16 @@ interface SpeakerSlashProps {
   filled?: boolean;
 }
 
-const SpeakerSlash: React.FC<SpeakerSlashProps> = ({ 
+function SpeakerSlash({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SpeakerSlashProps) {
   return filled ? (
     <SpeakerSlashFilled size={size} color={color} />
   ) : (
     <SpeakerSlashOutline size={size} color={color} />
   );
-};
+}
 
 export default SpeakerSlash;

@@ -8,16 +8,16 @@ interface MicrophoneProps {
   filled?: boolean;
 }
 
-const Microphone: React.FC<MicrophoneProps> = ({ 
+function Microphone({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: MicrophoneProps) {
   return filled ? (
     <MicrophoneFilled size={size} color={color} />
   ) : (
     <MicrophoneOutline size={size} color={color} />
   );
-};
+}
 
 export default Microphone;

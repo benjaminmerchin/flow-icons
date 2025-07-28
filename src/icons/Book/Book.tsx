@@ -8,16 +8,16 @@ interface BookProps {
   filled?: boolean;
 }
 
-const Book: React.FC<BookProps> = ({ 
+function Book({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BookProps) {
   return filled ? (
     <BookFilled size={size} color={color} />
   ) : (
     <BookOutline size={size} color={color} />
   );
-};
+}
 
 export default Book;

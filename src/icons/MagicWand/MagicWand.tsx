@@ -8,16 +8,16 @@ interface MagicWandProps {
   filled?: boolean;
 }
 
-const MagicWand: React.FC<MagicWandProps> = ({ 
+function MagicWand({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: MagicWandProps) {
   return filled ? (
     <MagicWandFilled size={size} color={color} />
   ) : (
     <MagicWandOutline size={size} color={color} />
   );
-};
+}
 
 export default MagicWand;

@@ -8,16 +8,16 @@ interface GameControllerProps {
   filled?: boolean;
 }
 
-const GameController: React.FC<GameControllerProps> = ({ 
+function GameController({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: GameControllerProps) {
   return filled ? (
     <GameControllerFilled size={size} color={color} />
   ) : (
     <GameControllerOutline size={size} color={color} />
   );
-};
+}
 
 export default GameController;

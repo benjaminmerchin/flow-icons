@@ -8,16 +8,16 @@ interface EarProps {
   filled?: boolean;
 }
 
-const Ear: React.FC<EarProps> = ({ 
+function Ear({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EarProps) {
   return filled ? (
     <EarFilled size={size} color={color} />
   ) : (
     <EarOutline size={size} color={color} />
   );
-};
+}
 
 export default Ear;

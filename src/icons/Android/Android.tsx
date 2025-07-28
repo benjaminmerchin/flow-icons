@@ -8,16 +8,16 @@ interface AndroidProps {
   filled?: boolean;
 }
 
-const Android: React.FC<AndroidProps> = ({ 
+function Android({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: AndroidProps) {
   return filled ? (
     <AndroidFilled size={size} color={color} />
   ) : (
     <AndroidOutline size={size} color={color} />
   );
-};
+}
 
 export default Android;

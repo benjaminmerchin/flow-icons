@@ -8,16 +8,16 @@ interface SeparateProps {
   filled?: boolean;
 }
 
-const Separate: React.FC<SeparateProps> = ({ 
+function Separate({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SeparateProps) {
   return filled ? (
     <SeparateFilled size={size} color={color} />
   ) : (
     <SeparateOutline size={size} color={color} />
   );
-};
+}
 
 export default Separate;

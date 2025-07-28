@@ -8,16 +8,16 @@ interface PersonProps {
   filled?: boolean;
 }
 
-const Person: React.FC<PersonProps> = ({ 
+function Person({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PersonProps) {
   return filled ? (
     <PersonFilled size={size} color={color} />
   ) : (
     <PersonOutline size={size} color={color} />
   );
-};
+}
 
 export default Person;

@@ -8,16 +8,16 @@ interface PuzzlePieceProps {
   filled?: boolean;
 }
 
-const PuzzlePiece: React.FC<PuzzlePieceProps> = ({ 
+function PuzzlePiece({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PuzzlePieceProps) {
   return filled ? (
     <PuzzlePieceFilled size={size} color={color} />
   ) : (
     <PuzzlePieceOutline size={size} color={color} />
   );
-};
+}
 
 export default PuzzlePiece;

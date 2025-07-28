@@ -8,16 +8,16 @@ interface PencilProps {
   filled?: boolean;
 }
 
-const Pencil: React.FC<PencilProps> = ({ 
+function Pencil({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PencilProps) {
   return filled ? (
     <PencilFilled size={size} color={color} />
   ) : (
     <PencilOutline size={size} color={color} />
   );
-};
+}
 
 export default Pencil;

@@ -8,16 +8,16 @@ interface SquareArrowUpRightProps {
   filled?: boolean;
 }
 
-const SquareArrowUpRight: React.FC<SquareArrowUpRightProps> = ({ 
+function SquareArrowUpRight({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SquareArrowUpRightProps) {
   return filled ? (
     <SquareArrowUpRightFilled size={size} color={color} />
   ) : (
     <SquareArrowUpRightOutline size={size} color={color} />
   );
-};
+}
 
 export default SquareArrowUpRight;

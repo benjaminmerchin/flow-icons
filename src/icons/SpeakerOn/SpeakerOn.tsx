@@ -8,16 +8,16 @@ interface SpeakerOnProps {
   filled?: boolean;
 }
 
-const SpeakerOn: React.FC<SpeakerOnProps> = ({ 
+function SpeakerOn({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SpeakerOnProps) {
   return filled ? (
     <SpeakerOnFilled size={size} color={color} />
   ) : (
     <SpeakerOnOutline size={size} color={color} />
   );
-};
+}
 
 export default SpeakerOn;

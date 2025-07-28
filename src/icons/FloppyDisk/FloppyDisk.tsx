@@ -8,16 +8,16 @@ interface FloppyDiskProps {
   filled?: boolean;
 }
 
-const FloppyDisk: React.FC<FloppyDiskProps> = ({ 
+function FloppyDisk({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: FloppyDiskProps) {
   return filled ? (
     <FloppyDiskFilled size={size} color={color} />
   ) : (
     <FloppyDiskOutline size={size} color={color} />
   );
-};
+}
 
 export default FloppyDisk;

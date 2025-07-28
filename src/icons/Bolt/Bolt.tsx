@@ -8,16 +8,16 @@ interface BoltProps {
   filled?: boolean;
 }
 
-const Bolt: React.FC<BoltProps> = ({ 
+function Bolt({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BoltProps) {
   return filled ? (
     <BoltFilled size={size} color={color} />
   ) : (
     <BoltOutline size={size} color={color} />
   );
-};
+}
 
 export default Bolt;

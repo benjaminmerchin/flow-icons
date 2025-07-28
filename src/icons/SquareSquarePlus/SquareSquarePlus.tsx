@@ -8,16 +8,16 @@ interface SquareSquarePlusProps {
   filled?: boolean;
 }
 
-const SquareSquarePlus: React.FC<SquareSquarePlusProps> = ({ 
+function SquareSquarePlus({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SquareSquarePlusProps) {
   return filled ? (
     <SquareSquarePlusFilled size={size} color={color} />
   ) : (
     <SquareSquarePlusOutline size={size} color={color} />
   );
-};
+}
 
 export default SquareSquarePlus;

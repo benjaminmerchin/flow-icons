@@ -8,16 +8,16 @@ interface MinusProps {
   filled?: boolean;
 }
 
-const Minus: React.FC<MinusProps> = ({ 
+function Minus({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: MinusProps) {
   return filled ? (
     <MinusFilled size={size} color={color} />
   ) : (
     <MinusOutline size={size} color={color} />
   );
-};
+}
 
 export default Minus;

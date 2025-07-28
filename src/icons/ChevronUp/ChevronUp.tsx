@@ -8,16 +8,16 @@ interface ChevronUpProps {
   filled?: boolean;
 }
 
-const ChevronUp: React.FC<ChevronUpProps> = ({ 
+function ChevronUp({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ChevronUpProps) {
   return filled ? (
     <ChevronUpFilled size={size} color={color} />
   ) : (
     <ChevronUpOutline size={size} color={color} />
   );
-};
+}
 
 export default ChevronUp;

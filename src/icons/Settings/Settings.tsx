@@ -8,16 +8,16 @@ interface SettingsProps {
   filled?: boolean;
 }
 
-const Settings: React.FC<SettingsProps> = ({ 
+function Settings({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SettingsProps) {
   return filled ? (
     <SettingsFilled size={size} color={color} />
   ) : (
     <SettingsOutline size={size} color={color} />
   );
-};
+}
 
 export default Settings;

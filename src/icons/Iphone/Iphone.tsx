@@ -8,16 +8,16 @@ interface IphoneProps {
   filled?: boolean;
 }
 
-const Iphone: React.FC<IphoneProps> = ({ 
+function Iphone({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: IphoneProps) {
   return filled ? (
     <IphoneFilled size={size} color={color} />
   ) : (
     <IphoneOutline size={size} color={color} />
   );
-};
+}
 
 export default Iphone;

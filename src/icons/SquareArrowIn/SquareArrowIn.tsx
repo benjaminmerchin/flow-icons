@@ -8,16 +8,16 @@ interface SquareArrowInProps {
   filled?: boolean;
 }
 
-const SquareArrowIn: React.FC<SquareArrowInProps> = ({ 
+function SquareArrowIn({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SquareArrowInProps) {
   return filled ? (
     <SquareArrowInFilled size={size} color={color} />
   ) : (
     <SquareArrowInOutline size={size} color={color} />
   );
-};
+}
 
 export default SquareArrowIn;

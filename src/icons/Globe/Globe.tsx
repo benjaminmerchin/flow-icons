@@ -8,16 +8,16 @@ interface GlobeProps {
   filled?: boolean;
 }
 
-const Globe: React.FC<GlobeProps> = ({ 
+function Globe({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: GlobeProps) {
   return filled ? (
     <GlobeFilled size={size} color={color} />
   ) : (
     <GlobeOutline size={size} color={color} />
   );
-};
+}
 
 export default Globe;

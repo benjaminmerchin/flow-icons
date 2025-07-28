@@ -8,16 +8,16 @@ interface SpeakerOffProps {
   filled?: boolean;
 }
 
-const SpeakerOff: React.FC<SpeakerOffProps> = ({ 
+function SpeakerOff({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SpeakerOffProps) {
   return filled ? (
     <SpeakerOffFilled size={size} color={color} />
   ) : (
     <SpeakerOffOutline size={size} color={color} />
   );
-};
+}
 
 export default SpeakerOff;

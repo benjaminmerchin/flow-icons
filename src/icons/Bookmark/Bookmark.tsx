@@ -8,16 +8,16 @@ interface BookmarkProps {
   filled?: boolean;
 }
 
-const Bookmark: React.FC<BookmarkProps> = ({ 
+function Bookmark({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: BookmarkProps) {
   return filled ? (
     <BookmarkFilled size={size} color={color} />
   ) : (
     <BookmarkOutline size={size} color={color} />
   );
-};
+}
 
 export default Bookmark;

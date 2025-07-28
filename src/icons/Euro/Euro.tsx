@@ -8,16 +8,16 @@ interface EuroProps {
   filled?: boolean;
 }
 
-const Euro: React.FC<EuroProps> = ({ 
+function Euro({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EuroProps) {
   return filled ? (
     <EuroFilled size={size} color={color} />
   ) : (
     <EuroOutline size={size} color={color} />
   );
-};
+}
 
 export default Euro;

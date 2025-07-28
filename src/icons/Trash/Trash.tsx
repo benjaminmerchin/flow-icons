@@ -8,16 +8,16 @@ interface TrashProps {
   filled?: boolean;
 }
 
-const Trash: React.FC<TrashProps> = ({ 
+function Trash({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: TrashProps) {
   return filled ? (
     <TrashFilled size={size} color={color} />
   ) : (
     <TrashOutline size={size} color={color} />
   );
-};
+}
 
 export default Trash;

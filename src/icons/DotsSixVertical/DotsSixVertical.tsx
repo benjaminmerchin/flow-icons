@@ -8,16 +8,16 @@ interface DotsSixVerticalProps {
   filled?: boolean;
 }
 
-const DotsSixVertical: React.FC<DotsSixVerticalProps> = ({ 
+function DotsSixVertical({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: DotsSixVerticalProps) {
   return filled ? (
     <DotsSixVerticalFilled size={size} color={color} />
   ) : (
     <DotsSixVerticalOutline size={size} color={color} />
   );
-};
+}
 
 export default DotsSixVertical;

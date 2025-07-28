@@ -8,16 +8,16 @@ interface HeartProps {
   filled?: boolean;
 }
 
-const Heart: React.FC<HeartProps> = ({ 
+function Heart({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: HeartProps) {
   return filled ? (
     <HeartFilled size={size} color={color} />
   ) : (
     <HeartOutline size={size} color={color} />
   );
-};
+}
 
 export default Heart;

@@ -8,16 +8,16 @@ interface ChevronRightProps {
   filled?: boolean;
 }
 
-const ChevronRight: React.FC<ChevronRightProps> = ({ 
+function ChevronRight({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ChevronRightProps) {
   return filled ? (
     <ChevronRightFilled size={size} color={color} />
   ) : (
     <ChevronRightOutline size={size} color={color} />
   );
-};
+}
 
 export default ChevronRight;

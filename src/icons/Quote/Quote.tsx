@@ -8,16 +8,16 @@ interface QuoteProps {
   filled?: boolean;
 }
 
-const Quote: React.FC<QuoteProps> = ({ 
+function Quote({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: QuoteProps) {
   return filled ? (
     <QuoteFilled size={size} color={color} />
   ) : (
     <QuoteOutline size={size} color={color} />
   );
-};
+}
 
 export default Quote;

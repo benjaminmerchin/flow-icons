@@ -8,16 +8,16 @@ interface PencilVerticalProps {
   filled?: boolean;
 }
 
-const PencilVertical: React.FC<PencilVerticalProps> = ({ 
+function PencilVertical({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: PencilVerticalProps) {
   return filled ? (
     <PencilVerticalFilled size={size} color={color} />
   ) : (
     <PencilVerticalOutline size={size} color={color} />
   );
-};
+}
 
 export default PencilVertical;

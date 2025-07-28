@@ -8,16 +8,16 @@ interface SquareArrowOutProps {
   filled?: boolean;
 }
 
-const SquareArrowOut: React.FC<SquareArrowOutProps> = ({ 
+function SquareArrowOut({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SquareArrowOutProps) {
   return filled ? (
     <SquareArrowOutFilled size={size} color={color} />
   ) : (
     <SquareArrowOutOutline size={size} color={color} />
   );
-};
+}
 
 export default SquareArrowOut;

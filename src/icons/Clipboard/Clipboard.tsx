@@ -8,16 +8,16 @@ interface ClipboardProps {
   filled?: boolean;
 }
 
-const Clipboard: React.FC<ClipboardProps> = ({ 
+function Clipboard({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ClipboardProps) {
   return filled ? (
     <ClipboardFilled size={size} color={color} />
   ) : (
     <ClipboardOutline size={size} color={color} />
   );
-};
+}
 
 export default Clipboard;

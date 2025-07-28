@@ -8,16 +8,16 @@ interface AlertTriangleProps {
   filled?: boolean;
 }
 
-const AlertTriangle: React.FC<AlertTriangleProps> = ({ 
+function AlertTriangle({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: AlertTriangleProps) {
   return filled ? (
     <AlertTriangleFilled size={size} color={color} />
   ) : (
     <AlertTriangleOutline size={size} color={color} />
   );
-};
+}
 
 export default AlertTriangle;

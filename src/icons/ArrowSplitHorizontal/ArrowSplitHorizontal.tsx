@@ -8,16 +8,16 @@ interface ArrowSplitHorizontalProps {
   filled?: boolean;
 }
 
-const ArrowSplitHorizontal: React.FC<ArrowSplitHorizontalProps> = ({ 
+function ArrowSplitHorizontal({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ArrowSplitHorizontalProps) {
   return filled ? (
     <ArrowSplitHorizontalFilled size={size} color={color} />
   ) : (
     <ArrowSplitHorizontalOutline size={size} color={color} />
   );
-};
+}
 
 export default ArrowSplitHorizontal;

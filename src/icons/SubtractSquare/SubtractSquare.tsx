@@ -8,16 +8,16 @@ interface SubtractSquareProps {
   filled?: boolean;
 }
 
-const SubtractSquare: React.FC<SubtractSquareProps> = ({ 
+function SubtractSquare({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SubtractSquareProps) {
   return filled ? (
     <SubtractSquareFilled size={size} color={color} />
   ) : (
     <SubtractSquareOutline size={size} color={color} />
   );
-};
+}
 
 export default SubtractSquare;

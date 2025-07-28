@@ -8,16 +8,16 @@ interface MagnifyingGlassProps {
   filled?: boolean;
 }
 
-const MagnifyingGlass: React.FC<MagnifyingGlassProps> = ({ 
+function MagnifyingGlass({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: MagnifyingGlassProps) {
   return filled ? (
     <MagnifyingGlassFilled size={size} color={color} />
   ) : (
     <MagnifyingGlassOutline size={size} color={color} />
   );
-};
+}
 
 export default MagnifyingGlass;

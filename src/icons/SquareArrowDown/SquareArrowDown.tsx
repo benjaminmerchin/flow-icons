@@ -8,16 +8,16 @@ interface SquareArrowDownProps {
   filled?: boolean;
 }
 
-const SquareArrowDown: React.FC<SquareArrowDownProps> = ({ 
+function SquareArrowDown({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: SquareArrowDownProps) {
   return filled ? (
     <SquareArrowDownFilled size={size} color={color} />
   ) : (
     <SquareArrowDownOutline size={size} color={color} />
   );
-};
+}
 
 export default SquareArrowDown;

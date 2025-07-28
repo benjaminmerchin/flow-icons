@@ -8,16 +8,16 @@ interface XProps {
   filled?: boolean;
 }
 
-const X: React.FC<XProps> = ({ 
+function X({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: XProps) {
   return filled ? (
     <XFilled size={size} color={color} />
   ) : (
     <XOutline size={size} color={color} />
   );
-};
+}
 
 export default X;

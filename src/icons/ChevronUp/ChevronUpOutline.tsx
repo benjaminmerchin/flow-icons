@@ -5,10 +5,10 @@ interface ChevronUpOutlineProps {
   color?: string;
 }
 
-const ChevronUpOutline: React.FC<ChevronUpOutlineProps> = ({ 
+function ChevronUpOutline({ 
   size = 24, 
   color = "#1A1A1A" 
-}) => {
+}: ChevronUpOutlineProps) {
   return (
     <svg 
       width={size} 
@@ -17,11 +17,9 @@ const ChevronUpOutline: React.FC<ChevronUpOutlineProps> = ({
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2929 6.79289C11.6834 6.40237 12.3166 6.40237 12.7071 6.79289L20.7071 14.7929C21.0976 15.1834 21.0976 15.8166 20.7071 16.2071C20.3166 16.5976 19.6834 16.5976 19.2929 16.2071L12 8.91421L4.70711 16.2071C4.31658 16.5976 3.68342 16.5976 3.29289 16.2071C2.90237 15.8166 2.90237 15.1834 3.29289 14.7929L11.2929 6.79289Z" fill={color}/>
-
+      <path fillRule="evenodd" clipRule="evenodd" d="M11.2929 6.79289C11.6834 6.40237 12.3166 6.40237 12.7071 6.79289L20.7071 14.7929C21.0976 15.1834 21.0976 15.8166 20.7071 16.2071C20.3166 16.5976 19.6834 16.5976 19.2929 16.2071L12 8.91421L4.70711 16.2071C4.31658 16.5976 3.68342 16.5976 3.29289 16.2071C2.90237 15.8166 2.90237 15.1834 3.29289 14.7929L11.2929 6.79289Z" fill={color}/>
     </svg>
   );
-};
+}
 
 export default ChevronUpOutline;

@@ -8,16 +8,16 @@ interface EyeProps {
   filled?: boolean;
 }
 
-const Eye: React.FC<EyeProps> = ({ 
+function Eye({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: EyeProps) {
   return filled ? (
     <EyeFilled size={size} color={color} />
   ) : (
     <EyeOutline size={size} color={color} />
   );
-};
+}
 
 export default Eye;

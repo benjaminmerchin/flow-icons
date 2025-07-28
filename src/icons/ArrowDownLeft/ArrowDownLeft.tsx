@@ -8,16 +8,16 @@ interface ArrowDownLeftProps {
   filled?: boolean;
 }
 
-const ArrowDownLeft: React.FC<ArrowDownLeftProps> = ({ 
+function ArrowDownLeft({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ArrowDownLeftProps) {
   return filled ? (
     <ArrowDownLeftFilled size={size} color={color} />
   ) : (
     <ArrowDownLeftOutline size={size} color={color} />
   );
-};
+}
 
 export default ArrowDownLeft;

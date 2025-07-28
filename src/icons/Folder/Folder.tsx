@@ -8,16 +8,16 @@ interface FolderProps {
   filled?: boolean;
 }
 
-const Folder: React.FC<FolderProps> = ({ 
+function Folder({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: FolderProps) {
   return filled ? (
     <FolderFilled size={size} color={color} />
   ) : (
     <FolderOutline size={size} color={color} />
   );
-};
+}
 
 export default Folder;

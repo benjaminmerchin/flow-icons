@@ -8,16 +8,16 @@ interface ArrowSplitVerticalProps {
   filled?: boolean;
 }
 
-const ArrowSplitVertical: React.FC<ArrowSplitVerticalProps> = ({ 
+function ArrowSplitVertical({ 
   size = 24, 
   color = "#1A1A1A",
   filled = false 
-}) => {
+}: ArrowSplitVerticalProps) {
   return filled ? (
     <ArrowSplitVerticalFilled size={size} color={color} />
   ) : (
     <ArrowSplitVerticalOutline size={size} color={color} />
   );
-};
+}
 
 export default ArrowSplitVertical;
