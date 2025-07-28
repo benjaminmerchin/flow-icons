@@ -1,0 +1,42 @@
+{
+  "name": "flow-icons",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminmerchin/flow-icons.git"
+  },
+  "description": "React icon components from clean SVGs",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "components",
+    "ui",
+    "flow-icons"
+  ],
+  "author": "Gauthier Niglio",
+  "maintainers": [
+    "Benjamin Merchin"
+  ],
+  "bugs": {
+    "url": "https://github.com/benjaminmerchin/flow-icons/issues"
+  },
+  "homepage": "https://github.com/benjaminmerchin/flow-icons#readme"
+}

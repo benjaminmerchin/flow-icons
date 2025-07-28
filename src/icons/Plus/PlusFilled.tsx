@@ -1,0 +1,27 @@
+import React from 'react';
+
+interface PlusFilledProps {
+  size?: number | string;
+  color?: string;
+}
+
+const PlusFilled: React.FC<PlusFilledProps> = ({ 
+  size = 24, 
+  color = "#1A1A1A" 
+}) => {
+  return (
+    <svg 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 5C12.5523 5 13 5.44772 13 6V11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13V18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18L11 13H5.99997C5.44768 13 4.99997 12.5523 4.99997 12C4.99997 11.4477 5.44768 11 5.99997 11H11V6C11 5.44772 11.4477 5 12 5Z" fill={color}/>
+
+    </svg>
+  );
+};
+
+export default PlusFilled;

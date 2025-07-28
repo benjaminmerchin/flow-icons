@@ -1,0 +1,23 @@
+import React from 'react';
+import SquareArrowUpLeftOutline from './SquareArrowUpLeftOutline';
+import SquareArrowUpLeftFilled from './SquareArrowUpLeftFilled';
+
+interface SquareArrowUpLeftProps {
+  size?: number | string;
+  color?: string;
+  filled?: boolean;
+}
+
+const SquareArrowUpLeft: React.FC<SquareArrowUpLeftProps> = ({ 
+  size = 24, 
+  color = "#1A1A1A",
+  filled = false 
+}) => {
+  return filled ? (
+    <SquareArrowUpLeftFilled size={size} color={color} />
+  ) : (
+    <SquareArrowUpLeftOutline size={size} color={color} />
+  );
+};
+
+export default SquareArrowUpLeft;
