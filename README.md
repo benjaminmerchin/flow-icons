@@ -149,6 +149,10 @@ node generate-icons.js
 - **Flexible**: Easily customizable colors and sizes
 - **Accessible**: High contrast and clear visual hierarchy
 
+## 📄 License
+
+Apache 2.0 License - see [LICENSE](./LICENSE) file for details.
+
 ## 👥 Credits
 
 - **Design**: Gauthier Niglio
