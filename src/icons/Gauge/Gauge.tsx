@@ -2,21 +2,20 @@ import React from 'react';
 import GaugeOutline from './GaugeOutline';
 import GaugeFilled from './GaugeFilled';
 
-interface GaugeProps {
+interface GaugeProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Gauge({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: GaugeProps) {
   return filled ? (
-    <GaugeFilled size={size} color={color} />
+    <GaugeFilled size={size} {...props} />
   ) : (
-    <GaugeOutline size={size} color={color} />
+    <GaugeOutline size={size} {...props} />
   );
 }
 

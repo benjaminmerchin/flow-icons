@@ -2,21 +2,20 @@ import React from 'react';
 import DataBaseOutline from './DataBaseOutline';
 import DataBaseFilled from './DataBaseFilled';
 
-interface DataBaseProps {
+interface DataBaseProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function DataBase({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: DataBaseProps) {
   return filled ? (
-    <DataBaseFilled size={size} color={color} />
+    <DataBaseFilled size={size} {...props} />
   ) : (
-    <DataBaseOutline size={size} color={color} />
+    <DataBaseOutline size={size} {...props} />
   );
 }
 

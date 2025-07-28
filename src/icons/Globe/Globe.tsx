@@ -2,21 +2,20 @@ import React from 'react';
 import GlobeOutline from './GlobeOutline';
 import GlobeFilled from './GlobeFilled';
 
-interface GlobeProps {
+interface GlobeProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Globe({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: GlobeProps) {
   return filled ? (
-    <GlobeFilled size={size} color={color} />
+    <GlobeFilled size={size} {...props} />
   ) : (
-    <GlobeOutline size={size} color={color} />
+    <GlobeOutline size={size} {...props} />
   );
 }
 

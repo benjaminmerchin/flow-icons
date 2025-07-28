@@ -2,21 +2,20 @@ import React from 'react';
 import SubtractSquareOutline from './SubtractSquareOutline';
 import SubtractSquareFilled from './SubtractSquareFilled';
 
-interface SubtractSquareProps {
+interface SubtractSquareProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function SubtractSquare({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SubtractSquareProps) {
   return filled ? (
-    <SubtractSquareFilled size={size} color={color} />
+    <SubtractSquareFilled size={size} {...props} />
   ) : (
-    <SubtractSquareOutline size={size} color={color} />
+    <SubtractSquareOutline size={size} {...props} />
   );
 }
 

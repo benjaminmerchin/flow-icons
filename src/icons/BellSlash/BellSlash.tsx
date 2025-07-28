@@ -2,21 +2,20 @@ import React from 'react';
 import BellSlashOutline from './BellSlashOutline';
 import BellSlashFilled from './BellSlashFilled';
 
-interface BellSlashProps {
+interface BellSlashProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function BellSlash({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: BellSlashProps) {
   return filled ? (
-    <BellSlashFilled size={size} color={color} />
+    <BellSlashFilled size={size} {...props} />
   ) : (
-    <BellSlashOutline size={size} color={color} />
+    <BellSlashOutline size={size} {...props} />
   );
 }
 

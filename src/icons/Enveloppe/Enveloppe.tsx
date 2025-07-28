@@ -2,21 +2,20 @@ import React from 'react';
 import EnveloppeOutline from './EnveloppeOutline';
 import EnveloppeFilled from './EnveloppeFilled';
 
-interface EnveloppeProps {
+interface EnveloppeProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Enveloppe({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: EnveloppeProps) {
   return filled ? (
-    <EnveloppeFilled size={size} color={color} />
+    <EnveloppeFilled size={size} {...props} />
   ) : (
-    <EnveloppeOutline size={size} color={color} />
+    <EnveloppeOutline size={size} {...props} />
   );
 }
 

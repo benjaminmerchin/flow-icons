@@ -2,21 +2,20 @@ import React from 'react';
 import MagnifyingGlassOutline from './MagnifyingGlassOutline';
 import MagnifyingGlassFilled from './MagnifyingGlassFilled';
 
-interface MagnifyingGlassProps {
+interface MagnifyingGlassProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function MagnifyingGlass({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: MagnifyingGlassProps) {
   return filled ? (
-    <MagnifyingGlassFilled size={size} color={color} />
+    <MagnifyingGlassFilled size={size} {...props} />
   ) : (
-    <MagnifyingGlassOutline size={size} color={color} />
+    <MagnifyingGlassOutline size={size} {...props} />
   );
 }
 

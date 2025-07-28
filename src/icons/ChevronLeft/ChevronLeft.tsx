@@ -2,21 +2,20 @@ import React from 'react';
 import ChevronLeftOutline from './ChevronLeftOutline';
 import ChevronLeftFilled from './ChevronLeftFilled';
 
-interface ChevronLeftProps {
+interface ChevronLeftProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ChevronLeft({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ChevronLeftProps) {
   return filled ? (
-    <ChevronLeftFilled size={size} color={color} />
+    <ChevronLeftFilled size={size} {...props} />
   ) : (
-    <ChevronLeftOutline size={size} color={color} />
+    <ChevronLeftOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import PlusOutline from './PlusOutline';
 import PlusFilled from './PlusFilled';
 
-interface PlusProps {
+interface PlusProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Plus({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PlusProps) {
   return filled ? (
-    <PlusFilled size={size} color={color} />
+    <PlusFilled size={size} {...props} />
   ) : (
-    <PlusOutline size={size} color={color} />
+    <PlusOutline size={size} {...props} />
   );
 }
 

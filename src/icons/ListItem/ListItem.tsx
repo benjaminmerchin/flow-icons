@@ -2,21 +2,20 @@ import React from 'react';
 import ListItemOutline from './ListItemOutline';
 import ListItemFilled from './ListItemFilled';
 
-interface ListItemProps {
+interface ListItemProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ListItem({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ListItemProps) {
   return filled ? (
-    <ListItemFilled size={size} color={color} />
+    <ListItemFilled size={size} {...props} />
   ) : (
-    <ListItemOutline size={size} color={color} />
+    <ListItemOutline size={size} {...props} />
   );
 }
 

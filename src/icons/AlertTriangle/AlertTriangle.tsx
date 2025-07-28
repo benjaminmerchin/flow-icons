@@ -2,21 +2,20 @@ import React from 'react';
 import AlertTriangleOutline from './AlertTriangleOutline';
 import AlertTriangleFilled from './AlertTriangleFilled';
 
-interface AlertTriangleProps {
+interface AlertTriangleProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function AlertTriangle({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: AlertTriangleProps) {
   return filled ? (
-    <AlertTriangleFilled size={size} color={color} />
+    <AlertTriangleFilled size={size} {...props} />
   ) : (
-    <AlertTriangleOutline size={size} color={color} />
+    <AlertTriangleOutline size={size} {...props} />
   );
 }
 

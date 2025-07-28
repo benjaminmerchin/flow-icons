@@ -2,21 +2,20 @@ import React from 'react';
 import InformationOutline from './InformationOutline';
 import InformationFilled from './InformationFilled';
 
-interface InformationProps {
+interface InformationProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Information({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: InformationProps) {
   return filled ? (
-    <InformationFilled size={size} color={color} />
+    <InformationFilled size={size} {...props} />
   ) : (
-    <InformationOutline size={size} color={color} />
+    <InformationOutline size={size} {...props} />
   );
 }
 

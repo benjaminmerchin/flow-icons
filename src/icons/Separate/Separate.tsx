@@ -2,21 +2,20 @@ import React from 'react';
 import SeparateOutline from './SeparateOutline';
 import SeparateFilled from './SeparateFilled';
 
-interface SeparateProps {
+interface SeparateProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Separate({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SeparateProps) {
   return filled ? (
-    <SeparateFilled size={size} color={color} />
+    <SeparateFilled size={size} {...props} />
   ) : (
-    <SeparateOutline size={size} color={color} />
+    <SeparateOutline size={size} {...props} />
   );
 }
 

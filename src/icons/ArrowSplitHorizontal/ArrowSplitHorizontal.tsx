@@ -2,21 +2,20 @@ import React from 'react';
 import ArrowSplitHorizontalOutline from './ArrowSplitHorizontalOutline';
 import ArrowSplitHorizontalFilled from './ArrowSplitHorizontalFilled';
 
-interface ArrowSplitHorizontalProps {
+interface ArrowSplitHorizontalProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ArrowSplitHorizontal({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ArrowSplitHorizontalProps) {
   return filled ? (
-    <ArrowSplitHorizontalFilled size={size} color={color} />
+    <ArrowSplitHorizontalFilled size={size} {...props} />
   ) : (
-    <ArrowSplitHorizontalOutline size={size} color={color} />
+    <ArrowSplitHorizontalOutline size={size} {...props} />
   );
 }
 

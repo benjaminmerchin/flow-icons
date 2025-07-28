@@ -2,21 +2,20 @@ import React from 'react';
 import PersonOutline from './PersonOutline';
 import PersonFilled from './PersonFilled';
 
-interface PersonProps {
+interface PersonProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Person({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PersonProps) {
   return filled ? (
-    <PersonFilled size={size} color={color} />
+    <PersonFilled size={size} {...props} />
   ) : (
-    <PersonOutline size={size} color={color} />
+    <PersonOutline size={size} {...props} />
   );
 }
 

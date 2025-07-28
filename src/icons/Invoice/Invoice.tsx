@@ -2,21 +2,20 @@ import React from 'react';
 import InvoiceOutline from './InvoiceOutline';
 import InvoiceFilled from './InvoiceFilled';
 
-interface InvoiceProps {
+interface InvoiceProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Invoice({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: InvoiceProps) {
   return filled ? (
-    <InvoiceFilled size={size} color={color} />
+    <InvoiceFilled size={size} {...props} />
   ) : (
-    <InvoiceOutline size={size} color={color} />
+    <InvoiceOutline size={size} {...props} />
   );
 }
 

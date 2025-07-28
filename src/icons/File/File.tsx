@@ -2,21 +2,20 @@ import React from 'react';
 import FileOutline from './FileOutline';
 import FileFilled from './FileFilled';
 
-interface FileProps {
+interface FileProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function File({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: FileProps) {
   return filled ? (
-    <FileFilled size={size} color={color} />
+    <FileFilled size={size} {...props} />
   ) : (
-    <FileOutline size={size} color={color} />
+    <FileOutline size={size} {...props} />
   );
 }
 

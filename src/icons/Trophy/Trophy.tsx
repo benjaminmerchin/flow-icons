@@ -2,21 +2,20 @@ import React from 'react';
 import TrophyOutline from './TrophyOutline';
 import TrophyFilled from './TrophyFilled';
 
-interface TrophyProps {
+interface TrophyProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Trophy({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: TrophyProps) {
   return filled ? (
-    <TrophyFilled size={size} color={color} />
+    <TrophyFilled size={size} {...props} />
   ) : (
-    <TrophyOutline size={size} color={color} />
+    <TrophyOutline size={size} {...props} />
   );
 }
 

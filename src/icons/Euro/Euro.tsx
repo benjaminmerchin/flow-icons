@@ -2,21 +2,20 @@ import React from 'react';
 import EuroOutline from './EuroOutline';
 import EuroFilled from './EuroFilled';
 
-interface EuroProps {
+interface EuroProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Euro({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: EuroProps) {
   return filled ? (
-    <EuroFilled size={size} color={color} />
+    <EuroFilled size={size} {...props} />
   ) : (
-    <EuroOutline size={size} color={color} />
+    <EuroOutline size={size} {...props} />
   );
 }
 

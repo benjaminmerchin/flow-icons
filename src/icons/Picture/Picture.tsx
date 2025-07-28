@@ -2,21 +2,20 @@ import React from 'react';
 import PictureOutline from './PictureOutline';
 import PictureFilled from './PictureFilled';
 
-interface PictureProps {
+interface PictureProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Picture({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PictureProps) {
   return filled ? (
-    <PictureFilled size={size} color={color} />
+    <PictureFilled size={size} {...props} />
   ) : (
-    <PictureOutline size={size} color={color} />
+    <PictureOutline size={size} {...props} />
   );
 }
 

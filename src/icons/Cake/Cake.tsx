@@ -2,21 +2,20 @@ import React from 'react';
 import CakeOutline from './CakeOutline';
 import CakeFilled from './CakeFilled';
 
-interface CakeProps {
+interface CakeProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Cake({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: CakeProps) {
   return filled ? (
-    <CakeFilled size={size} color={color} />
+    <CakeFilled size={size} {...props} />
   ) : (
-    <CakeOutline size={size} color={color} />
+    <CakeOutline size={size} {...props} />
   );
 }
 

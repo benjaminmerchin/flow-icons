@@ -2,21 +2,20 @@ import React from 'react';
 import FloppyDiskOutline from './FloppyDiskOutline';
 import FloppyDiskFilled from './FloppyDiskFilled';
 
-interface FloppyDiskProps {
+interface FloppyDiskProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function FloppyDisk({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: FloppyDiskProps) {
   return filled ? (
-    <FloppyDiskFilled size={size} color={color} />
+    <FloppyDiskFilled size={size} {...props} />
   ) : (
-    <FloppyDiskOutline size={size} color={color} />
+    <FloppyDiskOutline size={size} {...props} />
   );
 }
 

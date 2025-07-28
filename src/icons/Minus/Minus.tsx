@@ -2,21 +2,20 @@ import React from 'react';
 import MinusOutline from './MinusOutline';
 import MinusFilled from './MinusFilled';
 
-interface MinusProps {
+interface MinusProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Minus({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: MinusProps) {
   return filled ? (
-    <MinusFilled size={size} color={color} />
+    <MinusFilled size={size} {...props} />
   ) : (
-    <MinusOutline size={size} color={color} />
+    <MinusOutline size={size} {...props} />
   );
 }
 

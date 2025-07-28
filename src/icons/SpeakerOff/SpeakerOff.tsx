@@ -2,21 +2,20 @@ import React from 'react';
 import SpeakerOffOutline from './SpeakerOffOutline';
 import SpeakerOffFilled from './SpeakerOffFilled';
 
-interface SpeakerOffProps {
+interface SpeakerOffProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function SpeakerOff({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SpeakerOffProps) {
   return filled ? (
-    <SpeakerOffFilled size={size} color={color} />
+    <SpeakerOffFilled size={size} {...props} />
   ) : (
-    <SpeakerOffOutline size={size} color={color} />
+    <SpeakerOffOutline size={size} {...props} />
   );
 }
 

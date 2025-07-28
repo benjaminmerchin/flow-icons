@@ -2,21 +2,20 @@ import React from 'react';
 import EarOutline from './EarOutline';
 import EarFilled from './EarFilled';
 
-interface EarProps {
+interface EarProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Ear({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: EarProps) {
   return filled ? (
-    <EarFilled size={size} color={color} />
+    <EarFilled size={size} {...props} />
   ) : (
-    <EarOutline size={size} color={color} />
+    <EarOutline size={size} {...props} />
   );
 }
 

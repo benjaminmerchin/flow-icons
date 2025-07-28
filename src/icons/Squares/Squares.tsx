@@ -2,21 +2,20 @@ import React from 'react';
 import SquaresOutline from './SquaresOutline';
 import SquaresFilled from './SquaresFilled';
 
-interface SquaresProps {
+interface SquaresProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Squares({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SquaresProps) {
   return filled ? (
-    <SquaresFilled size={size} color={color} />
+    <SquaresFilled size={size} {...props} />
   ) : (
-    <SquaresOutline size={size} color={color} />
+    <SquaresOutline size={size} {...props} />
   );
 }
 

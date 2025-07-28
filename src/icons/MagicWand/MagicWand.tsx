@@ -2,21 +2,20 @@ import React from 'react';
 import MagicWandOutline from './MagicWandOutline';
 import MagicWandFilled from './MagicWandFilled';
 
-interface MagicWandProps {
+interface MagicWandProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function MagicWand({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: MagicWandProps) {
   return filled ? (
-    <MagicWandFilled size={size} color={color} />
+    <MagicWandFilled size={size} {...props} />
   ) : (
-    <MagicWandOutline size={size} color={color} />
+    <MagicWandOutline size={size} {...props} />
   );
 }
 

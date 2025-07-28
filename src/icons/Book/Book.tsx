@@ -2,21 +2,20 @@ import React from 'react';
 import BookOutline from './BookOutline';
 import BookFilled from './BookFilled';
 
-interface BookProps {
+interface BookProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Book({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: BookProps) {
   return filled ? (
-    <BookFilled size={size} color={color} />
+    <BookFilled size={size} {...props} />
   ) : (
-    <BookOutline size={size} color={color} />
+    <BookOutline size={size} {...props} />
   );
 }
 

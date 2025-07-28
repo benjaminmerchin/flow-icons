@@ -2,21 +2,20 @@ import React from 'react';
 import ChevronUpOutline from './ChevronUpOutline';
 import ChevronUpFilled from './ChevronUpFilled';
 
-interface ChevronUpProps {
+interface ChevronUpProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ChevronUp({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ChevronUpProps) {
   return filled ? (
-    <ChevronUpFilled size={size} color={color} />
+    <ChevronUpFilled size={size} {...props} />
   ) : (
-    <ChevronUpOutline size={size} color={color} />
+    <ChevronUpOutline size={size} {...props} />
   );
 }
 

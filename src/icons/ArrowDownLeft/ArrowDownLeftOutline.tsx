@@ -1,13 +1,12 @@
 import React from 'react';
 
-interface ArrowDownLeftOutlineProps {
+interface ArrowDownLeftOutlineProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
 }
 
 function ArrowDownLeftOutline({ 
-  size = 24, 
-  color = "currentColor" 
+  size = 24,
+  ...props
 }: ArrowDownLeftOutlineProps) {
   return (
     <svg 
@@ -16,8 +15,9 @@ function ArrowDownLeftOutline({
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      <path fillRule="evenodd" clipRule="evenodd" d="M16.182 18C16.182 18.5523 15.7343 19 15.182 19H6C5.44771 19 5 18.5523 5 18V8.81802C5 8.26573 5.44771 7.81802 6 7.81802C6.55229 7.81802 7 8.26573 7 8.81802V15.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L8.41421 17H15.182C15.7343 17 16.182 17.4477 16.182 18Z" fill={color}/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M16.182 18C16.182 18.5523 15.7343 19 15.182 19H6C5.44771 19 5 18.5523 5 18V8.81802C5 8.26573 5.44771 7.81802 6 7.81802C6.55229 7.81802 7 8.26573 7 8.81802V15.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L8.41421 17H15.182C15.7343 17 16.182 17.4477 16.182 18Z" fill="currentColor"/>
     </svg>
   );
 }

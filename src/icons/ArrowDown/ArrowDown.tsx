@@ -2,21 +2,20 @@ import React from 'react';
 import ArrowDownOutline from './ArrowDownOutline';
 import ArrowDownFilled from './ArrowDownFilled';
 
-interface ArrowDownProps {
+interface ArrowDownProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ArrowDown({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ArrowDownProps) {
   return filled ? (
-    <ArrowDownFilled size={size} color={color} />
+    <ArrowDownFilled size={size} {...props} />
   ) : (
-    <ArrowDownOutline size={size} color={color} />
+    <ArrowDownOutline size={size} {...props} />
   );
 }
 

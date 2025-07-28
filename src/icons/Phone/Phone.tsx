@@ -2,21 +2,20 @@ import React from 'react';
 import PhoneOutline from './PhoneOutline';
 import PhoneFilled from './PhoneFilled';
 
-interface PhoneProps {
+interface PhoneProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Phone({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PhoneProps) {
   return filled ? (
-    <PhoneFilled size={size} color={color} />
+    <PhoneFilled size={size} {...props} />
   ) : (
-    <PhoneOutline size={size} color={color} />
+    <PhoneOutline size={size} {...props} />
   );
 }
 

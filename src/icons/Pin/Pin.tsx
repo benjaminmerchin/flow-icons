@@ -2,21 +2,20 @@ import React from 'react';
 import PinOutline from './PinOutline';
 import PinFilled from './PinFilled';
 
-interface PinProps {
+interface PinProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Pin({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PinProps) {
   return filled ? (
-    <PinFilled size={size} color={color} />
+    <PinFilled size={size} {...props} />
   ) : (
-    <PinOutline size={size} color={color} />
+    <PinOutline size={size} {...props} />
   );
 }
 

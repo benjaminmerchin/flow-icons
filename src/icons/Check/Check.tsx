@@ -2,21 +2,20 @@ import React from 'react';
 import CheckOutline from './CheckOutline';
 import CheckFilled from './CheckFilled';
 
-interface CheckProps {
+interface CheckProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Check({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: CheckProps) {
   return filled ? (
-    <CheckFilled size={size} color={color} />
+    <CheckFilled size={size} {...props} />
   ) : (
-    <CheckOutline size={size} color={color} />
+    <CheckOutline size={size} {...props} />
   );
 }
 

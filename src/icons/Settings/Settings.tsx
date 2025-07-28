@@ -2,21 +2,20 @@ import React from 'react';
 import SettingsOutline from './SettingsOutline';
 import SettingsFilled from './SettingsFilled';
 
-interface SettingsProps {
+interface SettingsProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Settings({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SettingsProps) {
   return filled ? (
-    <SettingsFilled size={size} color={color} />
+    <SettingsFilled size={size} {...props} />
   ) : (
-    <SettingsOutline size={size} color={color} />
+    <SettingsOutline size={size} {...props} />
   );
 }
 

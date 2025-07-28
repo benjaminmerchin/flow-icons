@@ -2,21 +2,20 @@ import React from 'react';
 import AndroidOutline from './AndroidOutline';
 import AndroidFilled from './AndroidFilled';
 
-interface AndroidProps {
+interface AndroidProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Android({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: AndroidProps) {
   return filled ? (
-    <AndroidFilled size={size} color={color} />
+    <AndroidFilled size={size} {...props} />
   ) : (
-    <AndroidOutline size={size} color={color} />
+    <AndroidOutline size={size} {...props} />
   );
 }
 

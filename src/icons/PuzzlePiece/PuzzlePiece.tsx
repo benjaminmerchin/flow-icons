@@ -2,21 +2,20 @@ import React from 'react';
 import PuzzlePieceOutline from './PuzzlePieceOutline';
 import PuzzlePieceFilled from './PuzzlePieceFilled';
 
-interface PuzzlePieceProps {
+interface PuzzlePieceProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function PuzzlePiece({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PuzzlePieceProps) {
   return filled ? (
-    <PuzzlePieceFilled size={size} color={color} />
+    <PuzzlePieceFilled size={size} {...props} />
   ) : (
-    <PuzzlePieceOutline size={size} color={color} />
+    <PuzzlePieceOutline size={size} {...props} />
   );
 }
 

@@ -37,22 +37,21 @@ function svgToReactComponent(svgContent, componentName, props = {}) {
   
   const innerSvg = svgMatch[1];
   
-  // Remplacer les attributs fill="#1A1A1A" par {color}
+  // Remplacer les attributs fill="#1A1A1A" par currentColor
   // Traiter aussi les attributs avec des tirets
-  let processedSvg = innerSvg.replace(/fill="#1A1A1A"/g, 'fill={color}');
+  let processedSvg = innerSvg.replace(/fill="#1A1A1A"/g, 'fill="currentColor"');
   processedSvg = processedSvg.replace(/fill-rule=/g, 'fillRule=');
   processedSvg = processedSvg.replace(/clip-rule=/g, 'clipRule=');
   
   return `import React from 'react';
 
-interface ${componentName}Props {
+interface ${componentName}Props extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
 }
 
 function ${componentName}({ 
-  size = 24, 
-  color = "currentColor" 
+  size = 24,
+  ...props
 }: ${componentName}Props) {
   return (
     <svg 
@@ -61,6 +60,7 @@ function ${componentName}({
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       ${processedSvg.trim()}
     </svg>
@@ -83,29 +83,28 @@ function createWrapper(iconName, hasOutline, hasFilled) {
 import ${PascalName}Filled from './${PascalName}Filled';`;
     
     renderLogic = `  return filled ? (
-    <${PascalName}Filled size={size} color={color} />
+    <${PascalName}Filled size={size} {...props} />
   ) : (
-    <${PascalName}Outline size={size} color={color} />
+    <${PascalName}Outline size={size} {...props} />
   );`;
   } else if (hasOutline) {
     imports = `import ${PascalName}Outline from './${PascalName}Outline';`;
-    renderLogic = `  return <${PascalName}Outline size={size} color={color} />;`;
+    renderLogic = `  return <${PascalName}Outline size={size} {...props} />;`;
   } else if (hasFilled) {
     imports = `import ${PascalName}Filled from './${PascalName}Filled';`;
-    renderLogic = `  return <${PascalName}Filled size={size} color={color} />;`;
+    renderLogic = `  return <${PascalName}Filled size={size} {...props} />;`;
   }
   
   return `import React from 'react';
 ${imports}
 
-interface ${PascalName}Props {
-  size?: number | string;
-  color?: string;${hasOutline && hasFilled ? '\n  filled?: boolean;' : ''}
+interface ${PascalName}Props extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;${hasOutline && hasFilled ? '\n  filled?: boolean;' : ''}
 }
 
 function ${PascalName}({ 
-  size = 24, 
-  color = "currentColor"${hasOutline && hasFilled ? ',\n  filled = false' : ''} 
+  size = 24,${hasOutline && hasFilled ? '\n  filled = false,' : ''}
+  ...props
 }: ${PascalName}Props) {
 ${renderLogic}
 }

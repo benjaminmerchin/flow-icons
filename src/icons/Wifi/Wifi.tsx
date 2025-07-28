@@ -2,21 +2,20 @@ import React from 'react';
 import WifiOutline from './WifiOutline';
 import WifiFilled from './WifiFilled';
 
-interface WifiProps {
+interface WifiProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Wifi({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: WifiProps) {
   return filled ? (
-    <WifiFilled size={size} color={color} />
+    <WifiFilled size={size} {...props} />
   ) : (
-    <WifiOutline size={size} color={color} />
+    <WifiOutline size={size} {...props} />
   );
 }
 

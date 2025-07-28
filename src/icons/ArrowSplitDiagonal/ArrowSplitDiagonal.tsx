@@ -2,21 +2,20 @@ import React from 'react';
 import ArrowSplitDiagonalOutline from './ArrowSplitDiagonalOutline';
 import ArrowSplitDiagonalFilled from './ArrowSplitDiagonalFilled';
 
-interface ArrowSplitDiagonalProps {
+interface ArrowSplitDiagonalProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ArrowSplitDiagonal({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ArrowSplitDiagonalProps) {
   return filled ? (
-    <ArrowSplitDiagonalFilled size={size} color={color} />
+    <ArrowSplitDiagonalFilled size={size} {...props} />
   ) : (
-    <ArrowSplitDiagonalOutline size={size} color={color} />
+    <ArrowSplitDiagonalOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import SubtractCircleOutline from './SubtractCircleOutline';
 import SubtractCircleFilled from './SubtractCircleFilled';
 
-interface SubtractCircleProps {
+interface SubtractCircleProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function SubtractCircle({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SubtractCircleProps) {
   return filled ? (
-    <SubtractCircleFilled size={size} color={color} />
+    <SubtractCircleFilled size={size} {...props} />
   ) : (
-    <SubtractCircleOutline size={size} color={color} />
+    <SubtractCircleOutline size={size} {...props} />
   );
 }
 

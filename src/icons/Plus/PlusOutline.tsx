@@ -1,13 +1,12 @@
 import React from 'react';
 
-interface PlusOutlineProps {
+interface PlusOutlineProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
 }
 
 function PlusOutline({ 
-  size = 24, 
-  color = "currentColor" 
+  size = 24,
+  ...props
 }: PlusOutlineProps) {
   return (
     <svg 
@@ -16,8 +15,9 @@ function PlusOutline({
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      <path d="M13 4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4L11 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11L11 20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11H13V4Z" fill={color}/>
+      <path d="M13 4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4L11 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11L11 20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11H13V4Z" fill="currentColor"/>
     </svg>
   );
 }

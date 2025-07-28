@@ -2,21 +2,20 @@ import React from 'react';
 import XOutline from './XOutline';
 import XFilled from './XFilled';
 
-interface XProps {
+interface XProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function X({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: XProps) {
   return filled ? (
-    <XFilled size={size} color={color} />
+    <XFilled size={size} {...props} />
   ) : (
-    <XOutline size={size} color={color} />
+    <XOutline size={size} {...props} />
   );
 }
 

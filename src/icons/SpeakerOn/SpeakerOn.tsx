@@ -2,21 +2,20 @@ import React from 'react';
 import SpeakerOnOutline from './SpeakerOnOutline';
 import SpeakerOnFilled from './SpeakerOnFilled';
 
-interface SpeakerOnProps {
+interface SpeakerOnProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function SpeakerOn({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: SpeakerOnProps) {
   return filled ? (
-    <SpeakerOnFilled size={size} color={color} />
+    <SpeakerOnFilled size={size} {...props} />
   ) : (
-    <SpeakerOnOutline size={size} color={color} />
+    <SpeakerOnOutline size={size} {...props} />
   );
 }
 

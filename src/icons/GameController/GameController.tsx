@@ -2,21 +2,20 @@ import React from 'react';
 import GameControllerOutline from './GameControllerOutline';
 import GameControllerFilled from './GameControllerFilled';
 
-interface GameControllerProps {
+interface GameControllerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function GameController({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: GameControllerProps) {
   return filled ? (
-    <GameControllerFilled size={size} color={color} />
+    <GameControllerFilled size={size} {...props} />
   ) : (
-    <GameControllerOutline size={size} color={color} />
+    <GameControllerOutline size={size} {...props} />
   );
 }
 

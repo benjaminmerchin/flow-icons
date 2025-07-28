@@ -2,21 +2,20 @@ import React from 'react';
 import MicrophoneOutline from './MicrophoneOutline';
 import MicrophoneFilled from './MicrophoneFilled';
 
-interface MicrophoneProps {
+interface MicrophoneProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Microphone({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: MicrophoneProps) {
   return filled ? (
-    <MicrophoneFilled size={size} color={color} />
+    <MicrophoneFilled size={size} {...props} />
   ) : (
-    <MicrophoneOutline size={size} color={color} />
+    <MicrophoneOutline size={size} {...props} />
   );
 }
 

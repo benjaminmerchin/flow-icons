@@ -2,21 +2,20 @@ import React from 'react';
 import PlayOutline from './PlayOutline';
 import PlayFilled from './PlayFilled';
 
-interface PlayProps {
+interface PlayProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Play({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PlayProps) {
   return filled ? (
-    <PlayFilled size={size} color={color} />
+    <PlayFilled size={size} {...props} />
   ) : (
-    <PlayOutline size={size} color={color} />
+    <PlayOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import QuestionMarkOutline from './QuestionMarkOutline';
 import QuestionMarkFilled from './QuestionMarkFilled';
 
-interface QuestionMarkProps {
+interface QuestionMarkProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function QuestionMark({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: QuestionMarkProps) {
   return filled ? (
-    <QuestionMarkFilled size={size} color={color} />
+    <QuestionMarkFilled size={size} {...props} />
   ) : (
-    <QuestionMarkOutline size={size} color={color} />
+    <QuestionMarkOutline size={size} {...props} />
   );
 }
 

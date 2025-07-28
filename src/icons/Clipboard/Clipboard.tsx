@@ -2,21 +2,20 @@ import React from 'react';
 import ClipboardOutline from './ClipboardOutline';
 import ClipboardFilled from './ClipboardFilled';
 
-interface ClipboardProps {
+interface ClipboardProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Clipboard({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ClipboardProps) {
   return filled ? (
-    <ClipboardFilled size={size} color={color} />
+    <ClipboardFilled size={size} {...props} />
   ) : (
-    <ClipboardOutline size={size} color={color} />
+    <ClipboardOutline size={size} {...props} />
   );
 }
 

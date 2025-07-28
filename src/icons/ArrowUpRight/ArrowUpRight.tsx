@@ -2,21 +2,20 @@ import React from 'react';
 import ArrowUpRightOutline from './ArrowUpRightOutline';
 import ArrowUpRightFilled from './ArrowUpRightFilled';
 
-interface ArrowUpRightProps {
+interface ArrowUpRightProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ArrowUpRight({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ArrowUpRightProps) {
   return filled ? (
-    <ArrowUpRightFilled size={size} color={color} />
+    <ArrowUpRightFilled size={size} {...props} />
   ) : (
-    <ArrowUpRightOutline size={size} color={color} />
+    <ArrowUpRightOutline size={size} {...props} />
   );
 }
 

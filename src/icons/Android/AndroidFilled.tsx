@@ -1,13 +1,12 @@
 import React from 'react';
 
-interface AndroidFilledProps {
+interface AndroidFilledProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
 }
 
 function AndroidFilled({ 
-  size = 24, 
-  color = "currentColor" 
+  size = 24,
+  ...props
 }: AndroidFilledProps) {
   return (
     <svg 
@@ -16,8 +15,9 @@ function AndroidFilled({
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      <path fillRule="evenodd" clipRule="evenodd" d="M5 4C5 2.34315 6.34315 1 8 1H16C17.6569 1 19 2.34315 19 4V20C19 21.6569 17.6569 23 16 23H8C6.34315 23 5 21.6569 5 20V4ZM12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" fill={color}/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M5 4C5 2.34315 6.34315 1 8 1H16C17.6569 1 19 2.34315 19 4V20C19 21.6569 17.6569 23 16 23H8C6.34315 23 5 21.6569 5 20V4ZM12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" fill="currentColor"/>
     </svg>
   );
 }

@@ -2,21 +2,20 @@ import React from 'react';
 import LinkOutline from './LinkOutline';
 import LinkFilled from './LinkFilled';
 
-interface LinkProps {
+interface LinkProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Link({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: LinkProps) {
   return filled ? (
-    <LinkFilled size={size} color={color} />
+    <LinkFilled size={size} {...props} />
   ) : (
-    <LinkOutline size={size} color={color} />
+    <LinkOutline size={size} {...props} />
   );
 }
 

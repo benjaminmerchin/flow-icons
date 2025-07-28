@@ -2,21 +2,20 @@ import React from 'react';
 import EyeSlashOutline from './EyeSlashOutline';
 import EyeSlashFilled from './EyeSlashFilled';
 
-interface EyeSlashProps {
+interface EyeSlashProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function EyeSlash({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: EyeSlashProps) {
   return filled ? (
-    <EyeSlashFilled size={size} color={color} />
+    <EyeSlashFilled size={size} {...props} />
   ) : (
-    <EyeSlashOutline size={size} color={color} />
+    <EyeSlashOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import CrosshairOutline from './CrosshairOutline';
 import CrosshairFilled from './CrosshairFilled';
 
-interface CrosshairProps {
+interface CrosshairProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Crosshair({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: CrosshairProps) {
   return filled ? (
-    <CrosshairFilled size={size} color={color} />
+    <CrosshairFilled size={size} {...props} />
   ) : (
-    <CrosshairOutline size={size} color={color} />
+    <CrosshairOutline size={size} {...props} />
   );
 }
 

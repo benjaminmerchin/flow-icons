@@ -2,21 +2,20 @@ import React from 'react';
 import ArrowTopBottomOutline from './ArrowTopBottomOutline';
 import ArrowTopBottomFilled from './ArrowTopBottomFilled';
 
-interface ArrowTopBottomProps {
+interface ArrowTopBottomProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function ArrowTopBottom({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ArrowTopBottomProps) {
   return filled ? (
-    <ArrowTopBottomFilled size={size} color={color} />
+    <ArrowTopBottomFilled size={size} {...props} />
   ) : (
-    <ArrowTopBottomOutline size={size} color={color} />
+    <ArrowTopBottomOutline size={size} {...props} />
   );
 }
 

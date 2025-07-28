@@ -2,21 +2,20 @@ import React from 'react';
 import ChartOutline from './ChartOutline';
 import ChartFilled from './ChartFilled';
 
-interface ChartProps {
+interface ChartProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Chart({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: ChartProps) {
   return filled ? (
-    <ChartFilled size={size} color={color} />
+    <ChartFilled size={size} {...props} />
   ) : (
-    <ChartOutline size={size} color={color} />
+    <ChartOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import BookmarkOutline from './BookmarkOutline';
 import BookmarkFilled from './BookmarkFilled';
 
-interface BookmarkProps {
+interface BookmarkProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Bookmark({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: BookmarkProps) {
   return filled ? (
-    <BookmarkFilled size={size} color={color} />
+    <BookmarkFilled size={size} {...props} />
   ) : (
-    <BookmarkOutline size={size} color={color} />
+    <BookmarkOutline size={size} {...props} />
   );
 }
 

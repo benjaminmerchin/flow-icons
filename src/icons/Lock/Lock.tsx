@@ -2,21 +2,20 @@ import React from 'react';
 import LockOutline from './LockOutline';
 import LockFilled from './LockFilled';
 
-interface LockProps {
+interface LockProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Lock({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: LockProps) {
   return filled ? (
-    <LockFilled size={size} color={color} />
+    <LockFilled size={size} {...props} />
   ) : (
-    <LockOutline size={size} color={color} />
+    <LockOutline size={size} {...props} />
   );
 }
 

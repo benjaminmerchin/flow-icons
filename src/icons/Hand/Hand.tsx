@@ -2,21 +2,20 @@ import React from 'react';
 import HandOutline from './HandOutline';
 import HandFilled from './HandFilled';
 
-interface HandProps {
+interface HandProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Hand({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: HandProps) {
   return filled ? (
-    <HandFilled size={size} color={color} />
+    <HandFilled size={size} {...props} />
   ) : (
-    <HandOutline size={size} color={color} />
+    <HandOutline size={size} {...props} />
   );
 }
 

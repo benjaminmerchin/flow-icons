@@ -2,21 +2,20 @@ import React from 'react';
 import CircleArrowUpRightOutline from './CircleArrowUpRightOutline';
 import CircleArrowUpRightFilled from './CircleArrowUpRightFilled';
 
-interface CircleArrowUpRightProps {
+interface CircleArrowUpRightProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function CircleArrowUpRight({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: CircleArrowUpRightProps) {
   return filled ? (
-    <CircleArrowUpRightFilled size={size} color={color} />
+    <CircleArrowUpRightFilled size={size} {...props} />
   ) : (
-    <CircleArrowUpRightOutline size={size} color={color} />
+    <CircleArrowUpRightOutline size={size} {...props} />
   );
 }
 

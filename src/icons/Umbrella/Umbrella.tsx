@@ -2,21 +2,20 @@ import React from 'react';
 import UmbrellaOutline from './UmbrellaOutline';
 import UmbrellaFilled from './UmbrellaFilled';
 
-interface UmbrellaProps {
+interface UmbrellaProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Umbrella({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: UmbrellaProps) {
   return filled ? (
-    <UmbrellaFilled size={size} color={color} />
+    <UmbrellaFilled size={size} {...props} />
   ) : (
-    <UmbrellaOutline size={size} color={color} />
+    <UmbrellaOutline size={size} {...props} />
   );
 }
 

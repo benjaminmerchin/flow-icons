@@ -2,21 +2,20 @@ import React from 'react';
 import CameraOutline from './CameraOutline';
 import CameraFilled from './CameraFilled';
 
-interface CameraProps {
+interface CameraProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Camera({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: CameraProps) {
   return filled ? (
-    <CameraFilled size={size} color={color} />
+    <CameraFilled size={size} {...props} />
   ) : (
-    <CameraOutline size={size} color={color} />
+    <CameraOutline size={size} {...props} />
   );
 }
 

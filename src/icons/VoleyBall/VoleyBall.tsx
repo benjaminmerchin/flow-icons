@@ -2,21 +2,20 @@ import React from 'react';
 import VoleyBallOutline from './VoleyBallOutline';
 import VoleyBallFilled from './VoleyBallFilled';
 
-interface VoleyBallProps {
+interface VoleyBallProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function VoleyBall({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: VoleyBallProps) {
   return filled ? (
-    <VoleyBallFilled size={size} color={color} />
+    <VoleyBallFilled size={size} {...props} />
   ) : (
-    <VoleyBallOutline size={size} color={color} />
+    <VoleyBallOutline size={size} {...props} />
   );
 }
 

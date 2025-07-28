@@ -2,21 +2,20 @@ import React from 'react';
 import BarsOutline from './BarsOutline';
 import BarsFilled from './BarsFilled';
 
-interface BarsProps {
+interface BarsProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Bars({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: BarsProps) {
   return filled ? (
-    <BarsFilled size={size} color={color} />
+    <BarsFilled size={size} {...props} />
   ) : (
-    <BarsOutline size={size} color={color} />
+    <BarsOutline size={size} {...props} />
   );
 }
 

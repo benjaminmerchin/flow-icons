@@ -2,21 +2,20 @@ import React from 'react';
 import PopperOutline from './PopperOutline';
 import PopperFilled from './PopperFilled';
 
-interface PopperProps {
+interface PopperProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Popper({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PopperProps) {
   return filled ? (
-    <PopperFilled size={size} color={color} />
+    <PopperFilled size={size} {...props} />
   ) : (
-    <PopperOutline size={size} color={color} />
+    <PopperOutline size={size} {...props} />
   );
 }
 

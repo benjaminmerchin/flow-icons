@@ -2,21 +2,20 @@ import React from 'react';
 import HeartOutline from './HeartOutline';
 import HeartFilled from './HeartFilled';
 
-interface HeartProps {
+interface HeartProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Heart({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: HeartProps) {
   return filled ? (
-    <HeartFilled size={size} color={color} />
+    <HeartFilled size={size} {...props} />
   ) : (
-    <HeartOutline size={size} color={color} />
+    <HeartOutline size={size} {...props} />
   );
 }
 

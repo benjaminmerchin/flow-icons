@@ -2,21 +2,20 @@ import React from 'react';
 import PencilVerticalOutline from './PencilVerticalOutline';
 import PencilVerticalFilled from './PencilVerticalFilled';
 
-interface PencilVerticalProps {
+interface PencilVerticalProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function PencilVertical({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PencilVerticalProps) {
   return filled ? (
-    <PencilVerticalFilled size={size} color={color} />
+    <PencilVerticalFilled size={size} {...props} />
   ) : (
-    <PencilVerticalOutline size={size} color={color} />
+    <PencilVerticalOutline size={size} {...props} />
   );
 }
 

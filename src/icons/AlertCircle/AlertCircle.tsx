@@ -2,21 +2,20 @@ import React from 'react';
 import AlertCircleOutline from './AlertCircleOutline';
 import AlertCircleFilled from './AlertCircleFilled';
 
-interface AlertCircleProps {
+interface AlertCircleProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function AlertCircle({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: AlertCircleProps) {
   return filled ? (
-    <AlertCircleFilled size={size} color={color} />
+    <AlertCircleFilled size={size} {...props} />
   ) : (
-    <AlertCircleOutline size={size} color={color} />
+    <AlertCircleOutline size={size} {...props} />
   );
 }
 

@@ -2,21 +2,20 @@ import React from 'react';
 import PencilOutline from './PencilOutline';
 import PencilFilled from './PencilFilled';
 
-interface PencilProps {
+interface PencilProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
   filled?: boolean;
 }
 
 function Pencil({ 
-  size = 24, 
-  color = "currentColor",
-  filled = false 
+  size = 24,
+  filled = false,
+  ...props
 }: PencilProps) {
   return filled ? (
-    <PencilFilled size={size} color={color} />
+    <PencilFilled size={size} {...props} />
   ) : (
-    <PencilOutline size={size} color={color} />
+    <PencilOutline size={size} {...props} />
   );
 }
 

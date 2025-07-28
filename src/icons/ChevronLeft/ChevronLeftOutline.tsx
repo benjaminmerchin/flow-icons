@@ -1,13 +1,12 @@
 import React from 'react';
 
-interface ChevronLeftOutlineProps {
+interface ChevronLeftOutlineProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
-  color?: string;
 }
 
 function ChevronLeftOutline({ 
-  size = 24, 
-  color = "currentColor" 
+  size = 24,
+  ...props
 }: ChevronLeftOutlineProps) {
   return (
     <svg 
@@ -16,8 +15,9 @@ function ChevronLeftOutline({
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      <path fillRule="evenodd" clipRule="evenodd" d="M16.2071 3.29289C16.5976 3.68342 16.5976 4.31658 16.2071 4.70711L8.91421 12L16.2071 19.2929C16.5976 19.6834 16.5976 20.3166 16.2071 20.7071C15.8166 21.0976 15.1834 21.0976 14.7929 20.7071L6.79289 12.7071C6.40237 12.3166 6.40237 11.6834 6.79289 11.2929L14.7929 3.29289C15.1834 2.90237 15.8166 2.90237 16.2071 3.29289Z" fill={color}/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M16.2071 3.29289C16.5976 3.68342 16.5976 4.31658 16.2071 4.70711L8.91421 12L16.2071 19.2929C16.5976 19.6834 16.5976 20.3166 16.2071 20.7071C15.8166 21.0976 15.1834 21.0976 14.7929 20.7071L6.79289 12.7071C6.40237 12.3166 6.40237 11.6834 6.79289 11.2929L14.7929 3.29289C15.1834 2.90237 15.8166 2.90237 16.2071 3.29289Z" fill="currentColor"/>
     </svg>
   );
 }
